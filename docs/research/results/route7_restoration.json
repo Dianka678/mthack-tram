@@ -1,0 +1,294 @@
+{
+  "source_start": "https://transport.mos.ru/mostrans/all_news/125272",
+  "start_notice_published": "2025-07-09",
+  "source_restored": "https://transport.mos.ru/mostrans/all_news/125800",
+  "restoration_notice_published": "2025-08-13",
+  "cutoff": "2025-08-13",
+  "excluded_route_7_training_dates": [
+    "2025-07-10",
+    "2025-08-12"
+  ],
+  "validation": [
+    "2025-08-14",
+    "2025-08-31"
+  ],
+  "definition": "Only route 7 closure-period training rows excluded; all other rows and models unchanged",
+  "variants": {
+    "mean": {
+      "base": {
+        "1": {
+          "actual_sum": 268245,
+          "absolute_error_sum": 30110,
+          "pred_minus_actual": 21286,
+          "wape_score": 0.887752
+        },
+        "11": {
+          "actual_sum": 485280,
+          "absolute_error_sum": 59048,
+          "pred_minus_actual": 29454,
+          "wape_score": 0.878322
+        },
+        "12": {
+          "actual_sum": 511138,
+          "absolute_error_sum": 53049,
+          "pred_minus_actual": 23753,
+          "wape_score": 0.896214
+        },
+        "17": {
+          "actual_sum": 811709,
+          "absolute_error_sum": 54622,
+          "pred_minus_actual": -7374,
+          "wape_score": 0.932707
+        },
+        "25": {
+          "actual_sum": 104901,
+          "absolute_error_sum": 21083,
+          "pred_minus_actual": 7109,
+          "wape_score": 0.79902
+        },
+        "26": {
+          "actual_sum": 239463,
+          "absolute_error_sum": 43125,
+          "pred_minus_actual": 38591,
+          "wape_score": 0.81991
+        },
+        "28": {
+          "actual_sum": 139845,
+          "absolute_error_sum": 27864,
+          "pred_minus_actual": 19462,
+          "wape_score": 0.800751
+        },
+        "50": {
+          "actual_sum": 269345,
+          "absolute_error_sum": 88686,
+          "pred_minus_actual": 88066,
+          "wape_score": 0.670735
+        },
+        "7": {
+          "actual_sum": 322135,
+          "absolute_error_sum": 60977,
+          "pred_minus_actual": 55747,
+          "wape_score": 0.81071
+        },
+        "all": {
+          "actual_sum": 3152061,
+          "absolute_error_sum": 438564,
+          "pred_minus_actual": 276094,
+          "wape_score": 0.860864
+        },
+        "route_7_daytime": {
+          "actual_sum": 314299,
+          "absolute_error_sum": 59614,
+          "pred_minus_actual": 55556,
+          "wape_score": 0.810327
+        }
+      },
+      "exclude_shortened_history": {
+        "1": {
+          "actual_sum": 268245,
+          "absolute_error_sum": 30110,
+          "pred_minus_actual": 21286,
+          "wape_score": 0.887752
+        },
+        "11": {
+          "actual_sum": 485280,
+          "absolute_error_sum": 59048,
+          "pred_minus_actual": 29454,
+          "wape_score": 0.878322
+        },
+        "12": {
+          "actual_sum": 511138,
+          "absolute_error_sum": 53049,
+          "pred_minus_actual": 23753,
+          "wape_score": 0.896214
+        },
+        "17": {
+          "actual_sum": 811709,
+          "absolute_error_sum": 54622,
+          "pred_minus_actual": -7374,
+          "wape_score": 0.932707
+        },
+        "25": {
+          "actual_sum": 104901,
+          "absolute_error_sum": 21083,
+          "pred_minus_actual": 7109,
+          "wape_score": 0.79902
+        },
+        "26": {
+          "actual_sum": 239463,
+          "absolute_error_sum": 43125,
+          "pred_minus_actual": 38591,
+          "wape_score": 0.81991
+        },
+        "28": {
+          "actual_sum": 139845,
+          "absolute_error_sum": 27864,
+          "pred_minus_actual": 19462,
+          "wape_score": 0.800751
+        },
+        "50": {
+          "actual_sum": 269345,
+          "absolute_error_sum": 88686,
+          "pred_minus_actual": 88066,
+          "wape_score": 0.670735
+        },
+        "7": {
+          "actual_sum": 322135,
+          "absolute_error_sum": 92326,
+          "pred_minus_actual": 91082,
+          "wape_score": 0.713393
+        },
+        "all": {
+          "actual_sum": 3152061,
+          "absolute_error_sum": 469913,
+          "pred_minus_actual": 311429,
+          "wape_score": 0.850919
+        },
+        "route_7_daytime": {
+          "actual_sum": 314299,
+          "absolute_error_sum": 90874,
+          "pred_minus_actual": 90480,
+          "wape_score": 0.710868
+        }
+      }
+    },
+    "median": {
+      "base": {
+        "1": {
+          "actual_sum": 268245,
+          "absolute_error_sum": 41117,
+          "pred_minus_actual": 37655,
+          "wape_score": 0.846718
+        },
+        "11": {
+          "actual_sum": 485280,
+          "absolute_error_sum": 71053,
+          "pred_minus_actual": 49923,
+          "wape_score": 0.853583
+        },
+        "12": {
+          "actual_sum": 511138,
+          "absolute_error_sum": 69144,
+          "pred_minus_actual": 52686,
+          "wape_score": 0.864725
+        },
+        "17": {
+          "actual_sum": 811709,
+          "absolute_error_sum": 72246,
+          "pred_minus_actual": 40942,
+          "wape_score": 0.910995
+        },
+        "25": {
+          "actual_sum": 104901,
+          "absolute_error_sum": 22407,
+          "pred_minus_actual": 7957,
+          "wape_score": 0.786399
+        },
+        "26": {
+          "actual_sum": 239463,
+          "absolute_error_sum": 48938,
+          "pred_minus_actual": 45222,
+          "wape_score": 0.795634
+        },
+        "28": {
+          "actual_sum": 139845,
+          "absolute_error_sum": 30997,
+          "pred_minus_actual": 23695,
+          "wape_score": 0.778347
+        },
+        "50": {
+          "actual_sum": 269345,
+          "absolute_error_sum": 105601,
+          "pred_minus_actual": 105273,
+          "wape_score": 0.607934
+        },
+        "7": {
+          "actual_sum": 322135,
+          "absolute_error_sum": 85739,
+          "pred_minus_actual": 83085,
+          "wape_score": 0.733841
+        },
+        "all": {
+          "actual_sum": 3152061,
+          "absolute_error_sum": 547242,
+          "pred_minus_actual": 446438,
+          "wape_score": 0.826386
+        },
+        "route_7_daytime": {
+          "actual_sum": 314299,
+          "absolute_error_sum": 84390,
+          "pred_minus_actual": 82824,
+          "wape_score": 0.731498
+        }
+      },
+      "exclude_shortened_history": {
+        "1": {
+          "actual_sum": 268245,
+          "absolute_error_sum": 41117,
+          "pred_minus_actual": 37655,
+          "wape_score": 0.846718
+        },
+        "11": {
+          "actual_sum": 485280,
+          "absolute_error_sum": 71053,
+          "pred_minus_actual": 49923,
+          "wape_score": 0.853583
+        },
+        "12": {
+          "actual_sum": 511138,
+          "absolute_error_sum": 69144,
+          "pred_minus_actual": 52686,
+          "wape_score": 0.864725
+        },
+        "17": {
+          "actual_sum": 811709,
+          "absolute_error_sum": 72246,
+          "pred_minus_actual": 40942,
+          "wape_score": 0.910995
+        },
+        "25": {
+          "actual_sum": 104901,
+          "absolute_error_sum": 22407,
+          "pred_minus_actual": 7957,
+          "wape_score": 0.786399
+        },
+        "26": {
+          "actual_sum": 239463,
+          "absolute_error_sum": 48938,
+          "pred_minus_actual": 45222,
+          "wape_score": 0.795634
+        },
+        "28": {
+          "actual_sum": 139845,
+          "absolute_error_sum": 30997,
+          "pred_minus_actual": 23695,
+          "wape_score": 0.778347
+        },
+        "50": {
+          "actual_sum": 269345,
+          "absolute_error_sum": 105601,
+          "pred_minus_actual": 105273,
+          "wape_score": 0.607934
+        },
+        "7": {
+          "actual_sum": 322135,
+          "absolute_error_sum": 103438,
+          "pred_minus_actual": 102328,
+          "wape_score": 0.678899
+        },
+        "all": {
+          "actual_sum": 3152061,
+          "absolute_error_sum": 564941,
+          "pred_minus_actual": 465681,
+          "wape_score": 0.820771
+        },
+        "route_7_daytime": {
+          "actual_sum": 314299,
+          "absolute_error_sum": 102093,
+          "pred_minus_actual": 101695,
+          "wape_score": 0.675172
+        }
+      }
+    }
+  }
+}
