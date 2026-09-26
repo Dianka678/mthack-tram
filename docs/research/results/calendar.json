@@ -1,0 +1,155 @@
+{
+  "source_url": "https://government.ru/docs/52895/",
+  "published_at": "2024-10-04",
+  "hypothesis": "Known non-working weekdays behave like weekends",
+  "new_feature": "official nonworking weekday; Saturday/Sunday average profile",
+  "routes": [
+    1,
+    7,
+    11,
+    12,
+    17,
+    25,
+    26,
+    28,
+    50
+  ],
+  "folds": {
+    "may_jun": {
+      "cutoff": "2025-04-30",
+      "validation": [
+        "2025-05-01",
+        "2025-06-30"
+      ],
+      "eligible_nonworking_weekdays": [
+        "2025-05-01",
+        "2025-05-02",
+        "2025-05-08",
+        "2025-05-09",
+        "2025-06-12",
+        "2025-06-13"
+      ],
+      "n_changed_rows": 1296,
+      "variants": {
+        "mean": {
+          "base": {
+            "actual_sum": 11555908,
+            "absolute_error_sum": 2114993,
+            "pred_minus_actual": 915085,
+            "nonwork_absolute_error_sum": 709175,
+            "wape_score": 0.816977
+          },
+          "calendar": {
+            "actual_sum": 11555908,
+            "absolute_error_sum": 1630828,
+            "pred_minus_actual": 409726,
+            "nonwork_absolute_error_sum": 225010,
+            "wape_score": 0.858875
+          }
+        },
+        "median": {
+          "base": {
+            "actual_sum": 11555908,
+            "absolute_error_sum": 2331823,
+            "pred_minus_actual": 1563743,
+            "nonwork_absolute_error_sum": 770605,
+            "wape_score": 0.798214
+          },
+          "calendar": {
+            "actual_sum": 11555908,
+            "absolute_error_sum": 1832356,
+            "pred_minus_actual": 1050206,
+            "nonwork_absolute_error_sum": 271138,
+            "wape_score": 0.841436
+          }
+        }
+      }
+    },
+    "jul_aug": {
+      "cutoff": "2025-06-30",
+      "validation": [
+        "2025-07-01",
+        "2025-08-31"
+      ],
+      "eligible_nonworking_weekdays": [],
+      "n_changed_rows": 0,
+      "variants": {
+        "mean": {
+          "base": {
+            "actual_sum": 10717653,
+            "absolute_error_sum": 2319855,
+            "pred_minus_actual": 1666637,
+            "nonwork_absolute_error_sum": 0,
+            "wape_score": 0.783548
+          },
+          "calendar": {
+            "actual_sum": 10717653,
+            "absolute_error_sum": 2319855,
+            "pred_minus_actual": 1666637,
+            "nonwork_absolute_error_sum": 0,
+            "wape_score": 0.783548
+          }
+        },
+        "median": {
+          "base": {
+            "actual_sum": 10717653,
+            "absolute_error_sum": 2794723,
+            "pred_minus_actual": 2347643,
+            "nonwork_absolute_error_sum": 0,
+            "wape_score": 0.739241
+          },
+          "calendar": {
+            "actual_sum": 10717653,
+            "absolute_error_sum": 2794723,
+            "pred_minus_actual": 2347643,
+            "nonwork_absolute_error_sum": 0,
+            "wape_score": 0.739241
+          }
+        }
+      }
+    },
+    "sep_oct": {
+      "cutoff": "2025-08-31",
+      "validation": [
+        "2025-09-01",
+        "2025-10-31"
+      ],
+      "eligible_nonworking_weekdays": [],
+      "n_changed_rows": 0,
+      "variants": {
+        "mean": {
+          "base": {
+            "actual_sum": 12754481,
+            "absolute_error_sum": 1946284,
+            "pred_minus_actual": -861398,
+            "nonwork_absolute_error_sum": 0,
+            "wape_score": 0.847404
+          },
+          "calendar": {
+            "actual_sum": 12754481,
+            "absolute_error_sum": 1946284,
+            "pred_minus_actual": -861398,
+            "nonwork_absolute_error_sum": 0,
+            "wape_score": 0.847404
+          }
+        },
+        "median": {
+          "base": {
+            "actual_sum": 12754481,
+            "absolute_error_sum": 1683697,
+            "pred_minus_actual": -358863,
+            "nonwork_absolute_error_sum": 0,
+            "wape_score": 0.867992
+          },
+          "calendar": {
+            "actual_sum": 12754481,
+            "absolute_error_sum": 1683697,
+            "pred_minus_actual": -358863,
+            "nonwork_absolute_error_sum": 0,
+            "wape_score": 0.867992
+          }
+        }
+      }
+    }
+  }
+}
