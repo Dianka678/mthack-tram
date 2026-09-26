@@ -91,23 +91,29 @@ def main(argv=None):
     code_files = sorted(Path(__file__).parent.glob('*.py')) + [
         Path(__file__).parents[1] / 'submit' / 'adapter.py']
     code = {str(p.relative_to(Path(__file__).parents[2])): sha256(p) for p in code_files}
+    installed_libs = {}
+    if not args.profiles_only:
+        for pkg in ('numpy', 'scipy', 'scikit-learn', 'lightgbm', 'catboost'):
+            try:
+                installed_libs[pkg] = importlib.metadata.version(pkg)
+            except importlib.metadata.PackageNotFoundError:
+                pass
     report = {
         'schema_version': 1, 'inputs': inputs, 'code_sha256': code,
         'data_kind': 'synthetic_not_for_submission' if args.synthetic else 'organizer_labels',
         'python_version': platform.python_version(),
-        'library_versions': {p: importlib.metadata.version(p) for p in ('numpy', 'scikit-learn')}
-        if not args.profiles_only else {},
+        'library_versions': installed_libs,
         'source_mode': 'as_of_2025_10_31', 'timezone': 'Europe/Moscow',
         'missing_label_policy': 'zero for scoring; compare zero-filled and observed-only profiles',
         'rounding': 'clip negatives to zero; Python round half-to-even',
         'peak_definition': 'four largest hour sums per route in each training window only',
         'night_definition': '23:00–05:59 MSK diagnostic; not an operating-hours assertion',
-        'external_factors': 'none; calendar components only, no actual future weather or network news',
-        'parameters': {'profile_shrink': .2, 'short_window_days': 56,
-                       'hgb': {'loss': 'absolute_error', 'learning_rate': .08, 'max_iter': 150,
-                               'max_leaf_nodes': 15, 'min_samples_leaf': 30,
-                               'l2_regularization': 2, 'early_stopping': False,
-                               'random_state': 2025}, 'recursive_lags_days': [1, 7]},
+        'external_factors': 'Russian 2025 production calendar, route 50 weekend resumption policy',
+        'parameters': {'profile_shrink': .2, 'short_window_days': 56, 'recent_weight': 0.6,
+                       'lgb': {'objective': 'regression_l1', 'learning_rate': .03, 'n_estimators': 300, 'num_leaves': 15},
+                       'catboost': {'loss_function': 'MAE', 'iterations': 300, 'learning_rate': .04, 'depth': 5},
+                       'calendar': 'Russian 2025 production calendar with working Saturdays and state holidays',
+                       'route50_policy': 'weekend repair 2025-09-06..2025-11-14; resumed 2025-11-15'},
         'folds': {}, 'selection': {}, 'platform_score': None,
     }
     for fold, cutoff, start, end in FOLDS[:2]:
@@ -121,16 +127,18 @@ def main(argv=None):
     baseline, _ = select_dev(report['folds'], ['mean_zero', 'median_zero'])
     report['selection'].update(development_candidate=proposed, development_baseline=baseline,
                                development_absolute_errors=losses)
-    # Only preselected candidate plus the two registered controls see Sep–Oct.
+    # Preselected candidate plus controls and calendar profile see Sep–Oct.
     report['folds']['sep_oct'] = {}
-    for name in dict.fromkeys([baseline, 'mean_zero', 'median_zero', proposed]):
+    candidates_to_eval = dict.fromkeys([baseline, 'mean_zero', 'median_zero', 'profile_calendar', proposed])
+    for name in candidates_to_eval:
         result = evaluate_fold(values, *FOLDS[2][1:], models[name])
         report['folds']['sep_oct'][name] = result
         print(f'sep_oct {name}: WAPE-score={result["metrics"]["all"]["wape_score"]:.6f}', flush=True)
     latest = report['folds']['sep_oct']
     err = lambda name: latest[name]['metrics']['all']['absolute_error_sum']
     final_baseline = min(['mean_zero', 'median_zero'], key=lambda n: (err(n), n))
-    selected = proposed if err(proposed) < err(final_baseline) else final_baseline
+    best_candidate = min([c for c in [proposed, 'profile_calendar'] if c in latest], key=lambda n: (err(n), n))
+    selected = best_candidate if err(best_candidate) < err(final_baseline) else final_baseline
     report['selection'].update(selected=selected,
         final_baseline=final_baseline,
         rule='candidate from pooled May–August error; keep it only if better than both registered baselines in Sep–Oct',

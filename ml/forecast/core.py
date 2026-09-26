@@ -11,6 +11,46 @@ from pathlib import Path
 Key = tuple[str, date, int]
 Labels = dict[Key, int]
 
+RUSSIAN_HOLIDAYS_2025 = frozenset({
+    date(2025, 1, 1), date(2025, 1, 2), date(2025, 1, 3), date(2025, 1, 4),
+    date(2025, 1, 5), date(2025, 1, 6), date(2025, 1, 7), date(2025, 1, 8),
+    date(2025, 2, 23), date(2025, 3, 8),
+    date(2025, 5, 1), date(2025, 5, 2), date(2025, 5, 8), date(2025, 5, 9),
+    date(2025, 6, 12), date(2025, 6, 13),
+    date(2025, 11, 3), date(2025, 11, 4),
+    date(2025, 12, 31),
+})
+
+RUSSIAN_WORKING_WEEKENDS_2025 = frozenset({
+    date(2025, 11, 1),
+})
+
+
+def is_workday(d: date) -> bool:
+    if d in RUSSIAN_WORKING_WEEKENDS_2025:
+        return True
+    if d in RUSSIAN_HOLIDAYS_2025:
+        return False
+    return d.weekday() < 5
+
+
+def effective_weekday(d: date) -> int:
+    if d in RUSSIAN_WORKING_WEEKENDS_2025:
+        return 4
+    if d in RUSSIAN_HOLIDAYS_2025:
+        return 6
+    return d.weekday()
+
+
+def calendar_day_type(d: date) -> int:
+    if not is_workday(d):
+        return 3 if (effective_weekday(d) == 6 or d in RUSSIAN_HOLIDAYS_2025) else 2
+    if d in RUSSIAN_WORKING_WEEKENDS_2025:
+        return 4
+    if d.weekday() == 4:
+        return 1
+    return 0
+
 
 def days(start: date, end: date):
     while start <= end:

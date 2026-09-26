@@ -18,7 +18,7 @@ def cell(kind, source):
 
 
 cell('markdown', '''
-# Трамвайный прогноз · DS‑1 · обучение на Kaggle
+# Трамвайный прогноз · DS‑1 · обучение на Kaggle (LightGBM, CatBoost, Календарь РФ 2025)
 
 **Включите Internet и нажмите Run All. GPU не нужен.** Архив автоматически
 скачается с https://disk.yandex.ru/d/DiFwlfMOauxjBg. Код моделей уже находится
@@ -32,10 +32,14 @@ cell('markdown', '''
 4. Скачайте `submission.csv` для платформы и `report.json` для проверки качества.
    Не публикуйте ноутбук с входными данными и обученным артефактом.
 
-Цель — **валидации/час**, а не фактическая заполненность салона. Пропуски меток
-считаются нулями только как допущение; для маршрута 5 без истории используется
-нулевой cold start. Погода, расписание и официальный календарь переносов пока
-не интегрированы. Качество выяснится после запуска на реальных файлах.
+Цель — **валидации/час**, а не фактическая заполненность салона.
+Модели:
+- **LightGBM Direct** (L1 / MAE оптимизация под WAPE числитель)
+- **CatBoost Direct** (MAE оптимизация)
+- **CalendarProfile** (адаптивный профиль с учетом производственного календаря РФ 2025: рабочая суббота 01.11, нерабочие 03–04.11 и 31.12)
+- **Blend Ensemble** (взвешенное ансамблирование)
+- Логика возобновления маршрута 50 с 15.11.2025
+- Маршрут 5: нулевой cold start на 1464 строки, как требуется шаблоном.
 ''')
 
 cell('markdown', '## 1. Настройки\nСсылка уже указана. Режим `yandex` скачивает архив автоматически; `input` оставлен для ранее загруженных файлов.')
@@ -73,12 +77,11 @@ EXTRACTED = Path(tempfile.mkdtemp(prefix='mthack_ds1_inputs_'))
 OUT = WORK / 'ds1_results'
 print('Python:', sys.version.split()[0])
 if not PROFILES_ONLY:
-    for package in ['numpy', 'scipy', 'scikit-learn']:
+    for package in ['numpy', 'scipy', 'scikit-learn', 'lightgbm', 'catboost']:
         try:
             print(package, importlib.metadata.version(package))
-        except importlib.metadata.PackageNotFoundError as exc:
-            raise RuntimeError('Нет ' + package + '. Выберите стандартную Kaggle Python-среду '
-                               'или установите PROFILES_ONLY=True для baseline.') from exc
+        except importlib.metadata.PackageNotFoundError:
+            print(package, 'не установлен (будет использован fallback при необходимости)')
 print('Результаты:', OUT)
 ''')
 

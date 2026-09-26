@@ -187,6 +187,78 @@ class PipelineTests(unittest.TestCase):
         self.assertTrue(all(row[8] == 7 for row in model.model.batches[2]))
         self.assertEqual(model.history['7', model.cutoff, 12], 99)
 
+    def test_russian_calendar_2025(self):
+        from ml.forecast.core import is_workday, effective_weekday, calendar_day_type
+        # 2025-11-01 is a working Saturday
+        self.assertTrue(is_workday(date(2025, 11, 1)))
+        self.assertEqual(effective_weekday(date(2025, 11, 1)), 4)
+        self.assertEqual(calendar_day_type(date(2025, 11, 1)), 4)
+
+        # 2025-11-02 is Sunday
+        self.assertFalse(is_workday(date(2025, 11, 2)))
+        self.assertEqual(effective_weekday(date(2025, 11, 2)), 6)
+
+        # 2025-11-03 is non-working day (transferred holiday)
+        self.assertFalse(is_workday(date(2025, 11, 3)))
+        self.assertEqual(effective_weekday(date(2025, 11, 3)), 6)
+
+        # 2025-11-04 is National Unity Day
+        self.assertFalse(is_workday(date(2025, 11, 4)))
+        self.assertEqual(effective_weekday(date(2025, 11, 4)), 6)
+
+        # 2025-11-05 is normal Wednesday
+        self.assertTrue(is_workday(date(2025, 11, 5)))
+        self.assertEqual(effective_weekday(date(2025, 11, 5)), 2)
+
+        # 2025-12-31 is non-working day
+        self.assertFalse(is_workday(date(2025, 12, 31)))
+        self.assertEqual(effective_weekday(date(2025, 12, 31)), 6)
+
+    def test_calendar_profile_and_route50_rule(self):
+        from ml.forecast.models import CalendarProfile
+        history = {}
+        for d in [date(2025, 10, 1) + timedelta(days=i) for i in range(30)]:
+            for h in range(24):
+                history['50', d, h] = 50 if d.weekday() < 5 else 0
+                history['1', d, h] = 100 if d.weekday() < 5 else 20
+        cutoff = date(2025, 10, 31)
+        model = CalendarProfile(recent_weight=0.5, window=28, route50_rule=True).fit(history, date(2025, 10, 1), cutoff)
+
+        # 2025-11-01 is working Saturday: route 1 should have weekday traffic (~100)
+        p1_work = model.predict([('1', date(2025, 11, 1), 12)])[('1', date(2025, 11, 1), 12)]
+        self.assertGreater(p1_work, 80)
+
+        # 2025-11-04 is holiday: route 1 should have weekend/Sunday traffic (~20)
+        p1_hol = model.predict([('1', date(2025, 11, 4), 12)])[('1', date(2025, 11, 4), 12)]
+        self.assertLess(p1_hol, 30)
+
+        # Route 50 suspended on weekend before Nov 15
+        p50_susp = model.predict([('50', date(2025, 11, 2), 12)])[('50', date(2025, 11, 2), 12)]
+        self.assertEqual(p50_susp, 0)
+
+    @unittest.skipUnless(importlib.util.find_spec('lightgbm'), 'lightgbm required')
+    def test_lgbm_direct_fit_and_predict(self):
+        history = {}
+        for d in [date(2025, 9, 1) + timedelta(days=i) for i in range(30)]:
+            for h in range(24):
+                history['1', d, h] = 100 + h * 2 if d.weekday() < 5 else 20 + h
+        cutoff = date(2025, 9, 30)
+        model = Boosting(kind='lgb', recursive=False).fit(history, date(2025, 9, 1), cutoff)
+        preds = model.predict([('1', date(2025, 10, 1), 10), ('1', date(2025, 10, 4), 10)])
+        self.assertGreater(preds['1', date(2025, 10, 1), 10], preds['1', date(2025, 10, 4), 10])
+
+    @unittest.skipUnless(importlib.util.find_spec('catboost'), 'catboost required')
+    def test_catboost_direct_fit_and_predict(self):
+        history = {}
+        for d in [date(2025, 9, 1) + timedelta(days=i) for i in range(30)]:
+            for h in range(24):
+                history['1', d, h] = 100 + h * 2 if d.weekday() < 5 else 20 + h
+        cutoff = date(2025, 9, 30)
+        model = Boosting(kind='catboost', recursive=False).fit(history, date(2025, 9, 1), cutoff)
+        preds = model.predict([('1', date(2025, 10, 1), 10)])
+        self.assertGreater(preds['1', date(2025, 10, 1), 10], 50)
+
 
 if __name__ == '__main__':
     unittest.main()
+
