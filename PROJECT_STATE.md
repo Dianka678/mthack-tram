@@ -46,7 +46,7 @@
 
 | ID | Владелец | Ближайший результат | Статус | Issue/PR | Блокер |
 |---|---|---|---|---|---|
-| DS1 | DS‑1 | код прогноза, временной backtest, адаптер CSV, экспорт API и автономный Kaggle-ноутбук | реализация в ds1/forecast-submission; 12 тестов и полный синтетический прогон прошли; реальное обучение blocked | [Issue #2](https://github.com/Dianka678/mthack-tram/issues/2), [draft PR #3](https://github.com/Dianka678/mthack-tram/pull/3), [протокол DS‑1](ml/forecast/VALIDATION.md) | владелец данных / DS‑2: локальные labels train/test, оригинальный sample и описание; затем проверка качества, маршрута 5, CI и review |
+| DS1 | DS‑1 | код прогноза, временной backtest, адаптер CSV, экспорт API и автономный Kaggle-ноутбук | реализация в ds1/forecast-submission; 18 тестов и синтетические прогоны прошли; реальное обучение blocked | [Issue #2](https://github.com/Dianka678/mthack-tram/issues/2), [draft PR #3](https://github.com/Dianka678/mthack-tram/pull/3), [протокол DS‑1](ml/forecast/VALIDATION.md) | владелец данных / DS‑2: локальные labels train/test, оригинальный sample и описание; затем проверка качества, маршрута 5, CI и review |
 | DS2 | DS‑2 | сверка raw train + test, флаги качества, версии расписания и дополнительные факторы | аудит и 4 парных опыта выполнены в PR; review и продолжение исследований | [PR #1](https://github.com/Dianka678/mthack-tram/pull/1) | пограничные часы, расписание и погодные архивы |
 | FULLSTACK | Fullstack | макет, API, auth, Compose, экспорт | todo | — | контракт маршрутов |
 | COORD | назначить | 2 сабмита, демо, README, питч | todo | — | участники |
@@ -61,6 +61,7 @@
 | 26.09 | DS‑2 | Добавлены диагностика маршрутов 7/50 и парные опыты с окном истории, календарём, восстановлением маршрута 7 и отменой маршрута 50 | отчёты и JSON в [PR #1](https://github.com/Dianka678/mthack-tram/pull/1); положительные и отрицательные результаты выше | `f61f494` … `7d21197`, PR #1 |
 | 26.09 | DS‑1 | Реализованы профили, прямой/рекурсивный бустинг, временная проверка, строгий CSV и экспорт API; код ещё не в main | 12 тестов, полный синтетический запуск, численное совпадение контролей с DS‑2 на синтетике; реальный WAPE и сабмит не подтверждены, входные файлы недоступны | `613da6c`, [Issue #2](https://github.com/Dianka678/mthack-tram/issues/2), [draft PR #3](https://github.com/Dianka678/mthack-tram/pull/3) |
 | 26.09 | DS‑1 | Добавлен автономный DS1_Kaggle_Train.ipynb: CPU, поиск CSV/ZIP, полный запуск и скачивание результатов без доступа к GitHub | Все ячейки выполнены локально через nbclient на синтетическом ZIP; реальный запуск на Kaggle и WAPE ещё не подтверждены | [draft PR #3](https://github.com/Dianka678/mthack-tram/pull/3), [Issue #2](https://github.com/Dianka678/mthack-tram/issues/2) |
+| 26.09 | DS‑1 | Kaggle-ноутбук по умолчанию скачивает архив организаторов с Яндекс Диска: повторы, докачка, хеш, кеш | 18 тестов; весь ноутбук прошёл локально с имитацией API/сети и синтетическим ZIP; живое скачивание из Kaggle не проверено | [draft PR #3](https://github.com/Dianka678/mthack-tram/pull/3) |
 
 ## Ближайший контроль
 

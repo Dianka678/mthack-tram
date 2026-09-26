@@ -1,4 +1,4 @@
-"""Build an offline, standalone Kaggle notebook from the reviewed DS-1 modules."""
+"""Build a standalone Kaggle notebook with automatic Yandex Disk download from the reviewed DS-1 modules."""
 import hashlib
 import json
 import textwrap
@@ -20,15 +20,14 @@ def cell(kind, source):
 cell('markdown', '''
 # Трамвайный прогноз · DS‑1 · обучение на Kaggle
 
-**Загрузите входы и нажмите Run All. GPU не нужен.** Код моделей находится
-внутри ноутбука: подключать GitHub, токены или интернет для скачивания кода не нужно.
+**Включите Internet и нажмите Run All. GPU не нужен.** Архив автоматически
+скачается с https://disk.yandex.ru/d/DiFwlfMOauxjBg. Код моделей уже находится
+внутри ноутбука: подключать GitHub или вводить токены не нужно.
 
 1. Создайте Kaggle Notebook и импортируйте этот `.ipynb`.
-2. Через **Add Input** добавьте **приватный** набор с файлами
-   `labels_day_train.csv`, `labels_day_test.csv`, `test_submission.csv`
-   и описанием `README.md`, если оно есть. Вместо распакованных файлов можно
-   добавить `dataset.zip`: будут прочитаны только небольшие метки и шаблон.
-   Сырые `train.csv`/`test.csv` для этого ноутбука не нужны.
+2. В настройках сессии включите **Internet**. Добавлять данные через Add Input
+   не требуется: ноутбук скачает `dataset.zip` по указанной публичной ссылке
+   (около 2,54 ГБ), проверит размер/хеш и извлечёт только метки и шаблон.
 3. Оставьте **Accelerator: None / CPU** и выполните все ячейки.
 4. Скачайте `submission.csv` для платформы и `report.json` для проверки качества.
    Не публикуйте ноутбук с входными данными и обученным артефактом.
@@ -39,7 +38,7 @@ cell('markdown', '''
 не интегрированы. Качество выяснится после запуска на реальных файлах.
 ''')
 
-cell('markdown', '## 1. Настройки\nОбычно менять ничего не нужно. Если найдено несколько копий входов, впишите точные пути в `INPUT_FILES`.')
+cell('markdown', '## 1. Настройки\nСсылка уже указана. Режим `yandex` скачивает архив автоматически; `input` оставлен для ранее загруженных файлов.')
 cell('code', '''
 import os
 import sys
@@ -54,6 +53,9 @@ from pathlib import Path
 
 PROFILES_ONLY = False  # True: только baseline, без бустинга; другой набор кандидатов.
 RUN_TESTS = True
+DATA_SOURCE = 'yandex'  # 'input' — необязательный ручной вариант через Add Input.
+YANDEX_URL = 'https://disk.yandex.ru/d/DiFwlfMOauxjBg'
+DOWNLOAD_CACHE = '/tmp/mthack_yandex'
 INPUT_ROOT = Path(os.environ.get('MTHACK_INPUT_DIR', '/kaggle/input'))
 WORK = Path(os.environ.get('MTHACK_WORK_DIR', '/kaggle/working'))
 INPUT_FILES = {
@@ -86,7 +88,9 @@ cell('markdown', '''
 Ничего не скачивается. Исходные данные не входят в ноутбук.
 ''')
 paths = ['ml/forecast/core.py', 'ml/forecast/models.py', 'ml/forecast/run.py',
-         'ml/forecast/prepare_inputs.py', 'ml/forecast/test_pipeline.py', 'ml/submit/adapter.py']
+         'ml/forecast/prepare_inputs.py', 'ml/forecast/test_pipeline.py',
+         'ml/forecast/download_yandex.py', 'ml/forecast/test_download_yandex.py',
+         'ml/submit/adapter.py']
 sources = {name: (ROOT / name).read_text() for name in paths}
 source_hashes = {name: hashlib.sha256(source.encode()).hexdigest() for name, source in sources.items()}
 cell('code', 'SOURCES = ' + repr(sources) + '\nSOURCE_HASHES = ' + repr(source_hashes) + '''
@@ -110,18 +114,33 @@ def run_module(module, *arguments):
         raise RuntimeError(f'{module} завершился с ошибкой {result}. См. вывод выше.')
 
 if RUN_TESTS:
-    run_module('unittest', 'ml.forecast.test_pipeline', '-v')
+    run_module('unittest', 'discover', '-s', 'ml/forecast', '-p', 'test_*.py', '-v')
 ''')
 
 cell('markdown', '''
-## 3. Поиск входных файлов
-Ищем файлы по точным именам внутри `/kaggle/input`. Если они только в ZIP,
-извлекаем нужные небольшие файлы во временную папку, без сырых транзакций.
-При неоднозначности останавливаемся: нельзя случайно обучиться на другой копии.
+## 3. Скачать архив с Яндекс Диска и найти входы
+Официальный публичный API не требует токена. Скачивание идёт потоком в `/tmp`,
+с прогрессом, повторными попытками, проверкой размера и хеша. При повторном запуске
+проверенный архив используется снова; частичная загрузка докачивается, если сервер
+поддерживает Range. В память целый архив не загружается.
+
+Распаковываются только небольшие метки и шаблон; сырые транзакции остаются в ZIP.
+При сетевой ошибке ячейка остановится с объяснением, а не начнёт обучение без данных.
+Официальный способ получения ссылки: https://yandex.cloud/en/docs/datasphere/operations/data/connect-to-ya-disk
 ''')
 cell('code', '''
-if not INPUT_ROOT.is_dir():
-    raise FileNotFoundError('Нет входной папки. Добавьте приватный набор через Add Input.')
+SEARCH_ROOT = INPUT_ROOT
+if DATA_SOURCE == 'yandex':
+    import importlib.util
+    spec = importlib.util.spec_from_file_location('ds1_yandex', RUNTIME / 'ml/forecast/download_yandex.py')
+    downloader = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(downloader)
+    downloaded_archive = downloader.download(YANDEX_URL, DOWNLOAD_CACHE)
+    SEARCH_ROOT = downloaded_archive.parent
+elif DATA_SOURCE != 'input':
+    raise ValueError("DATA_SOURCE должен быть 'yandex' или 'input'")
+if not SEARCH_ROOT.is_dir():
+    raise FileNotFoundError('Нет входной папки. Для ручного режима добавьте набор через Add Input.')
 required = {'train': 'labels_day_train.csv', 'test': 'labels_day_test.csv',
             'sample': 'test_submission.csv'}
 files = {}
@@ -132,7 +151,7 @@ for role, name in required.items():
             raise FileNotFoundError(path)
         files[role] = path
     else:
-        matches = sorted(INPUT_ROOT.rglob(name))
+        matches = sorted(SEARCH_ROOT.rglob(name))
         if len(matches) > 1:
             raise RuntimeError(f'Несколько {name}: {matches}. Укажите INPUT_FILES[{role!r}].')
         if matches:
@@ -141,7 +160,7 @@ for role, name in required.items():
 missing = set(required) - set(files)
 archive_candidates = {role: [] for role in missing}
 if missing:
-    for archive in sorted(INPUT_ROOT.rglob('*.zip')):
+    for archive in sorted(SEARCH_ROOT.rglob('*.zip')):
         with zipfile.ZipFile(archive) as bundle:
             for info in bundle.infolist():
                 for role in missing:
@@ -162,7 +181,16 @@ if missing:
 
 for role, path in files.items():
     print(role, '→', path, '|', f'{path.stat().st_size:,}', 'байт')
-descriptions = sorted(INPUT_ROOT.rglob('README.md'))
+# Описание внутри исходного ZIP тоже можно прочитать без извлечения raw CSV.
+for archive in sorted(SEARCH_ROOT.rglob('*.zip')):
+    with zipfile.ZipFile(archive) as bundle:
+        descriptions_in_zip = [i for i in bundle.infolist()
+                               if Path(i.filename).name.lower() == 'readme.md' and i.file_size < 200_000]
+        if len(descriptions_in_zip) == 1:
+            description_path = EXTRACTED / 'README.md'
+            description_path.write_bytes(bundle.read(descriptions_in_zip[0]))
+            print('Описание из архива:\\n', description_path.read_text(encoding='utf-8-sig'))
+descriptions = sorted(SEARCH_ROOT.rglob('README.md'))
 if len(descriptions) == 1 and descriptions[0].stat().st_size < 200_000:
     print('\\nОписание набора:\\n', descriptions[0].read_text(encoding='utf-8-sig'))
 else:
@@ -264,7 +292,7 @@ cell('markdown', '''
 notebook = {'cells': cells, 'metadata': {
     'kernelspec': {'display_name': 'Python 3', 'language': 'python', 'name': 'python3'},
     'language_info': {'name': 'python', 'version': '3.12.0'},
-    'kaggle': {'isInternetEnabled': False, 'isGpuEnabled': False,
+    'kaggle': {'isInternetEnabled': True, 'isGpuEnabled': False,
                'accelerator': 'none', 'dataSources': []},
     'ds1': {'embedded_sha256': source_hashes, 'data_included': False}},
     'nbformat': 4, 'nbformat_minor': 5}
