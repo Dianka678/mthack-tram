@@ -1,0 +1,318 @@
+{
+  "train_cutoff": "2025-08-31",
+  "validation": "2025-09-01/2025-10-31",
+  "rule": "Missing hourly label means zero only for scoring, as in baseline; same 9 routes and all 24 hours.",
+  "selection_warning": "Four alternatives compared on validation; winner is exploratory and cannot be claimed as independently validated.",
+  "baseline_median": {
+    "1": {
+      "wape_score": 0.871104,
+      "actual_sum": 1136093,
+      "absolute_error_sum": 146438,
+      "pred_minus_actual": -76604
+    },
+    "11": {
+      "wape_score": 0.892107,
+      "actual_sum": 1907061,
+      "absolute_error_sum": 205759,
+      "pred_minus_actual": -65765
+    },
+    "12": {
+      "wape_score": 0.910005,
+      "actual_sum": 1983604,
+      "absolute_error_sum": 178515,
+      "pred_minus_actual": -32407
+    },
+    "17": {
+      "wape_score": 0.915704,
+      "actual_sum": 3063025,
+      "absolute_error_sum": 258201,
+      "pred_minus_actual": -126707
+    },
+    "25": {
+      "wape_score": 0.796737,
+      "actual_sum": 464537,
+      "absolute_error_sum": 94423,
+      "pred_minus_actual": -78515
+    },
+    "26": {
+      "wape_score": 0.866295,
+      "actual_sum": 1089964,
+      "absolute_error_sum": 145734,
+      "pred_minus_actual": -114004
+    },
+    "28": {
+      "wape_score": 0.836515,
+      "actual_sum": 602164,
+      "absolute_error_sum": 98445,
+      "pred_minus_actual": -39933
+    },
+    "50": {
+      "wape_score": 0.728029,
+      "actual_sum": 1157460,
+      "absolute_error_sum": 314796,
+      "pred_minus_actual": 144024
+    },
+    "7": {
+      "wape_score": 0.821271,
+      "actual_sum": 1350573,
+      "absolute_error_sum": 241386,
+      "pred_minus_actual": 31048
+    },
+    "all": {
+      "wape_score": 0.867992,
+      "actual_sum": 12754481,
+      "absolute_error_sum": 1683697,
+      "pred_minus_actual": -358863
+    }
+  },
+  "variants": {
+    "exclude_jul_aug_all": {
+      "1": {
+        "absolute_error_sum": 119952,
+        "actual_sum": 1136093,
+        "pred_minus_actual": -15530,
+        "wape_score": 0.894417
+      },
+      "7": {
+        "absolute_error_sum": 241808,
+        "actual_sum": 1350573,
+        "pred_minus_actual": 143914,
+        "wape_score": 0.820959
+      },
+      "11": {
+        "absolute_error_sum": 182454,
+        "actual_sum": 1907061,
+        "pred_minus_actual": 7840,
+        "wape_score": 0.904327
+      },
+      "12": {
+        "absolute_error_sum": 180402,
+        "actual_sum": 1983604,
+        "pred_minus_actual": 55232,
+        "wape_score": 0.909053
+      },
+      "17": {
+        "absolute_error_sum": 208952,
+        "actual_sum": 3063025,
+        "pred_minus_actual": -36884,
+        "wape_score": 0.931782
+      },
+      "25": {
+        "absolute_error_sum": 80104,
+        "actual_sum": 464537,
+        "pred_minus_actual": -55660,
+        "wape_score": 0.827562
+      },
+      "26": {
+        "absolute_error_sum": 104448,
+        "actual_sum": 1089964,
+        "pred_minus_actual": -37888,
+        "wape_score": 0.904173
+      },
+      "28": {
+        "absolute_error_sum": 87477,
+        "actual_sum": 602164,
+        "pred_minus_actual": -1103,
+        "wape_score": 0.854729
+      },
+      "50": {
+        "absolute_error_sum": 308260,
+        "actual_sum": 1157460,
+        "pred_minus_actual": 180522,
+        "wape_score": 0.733675
+      },
+      "all": {
+        "absolute_error_sum": 1513857,
+        "actual_sum": 12754481,
+        "pred_minus_actual": 240443,
+        "wape_score": 0.881308
+      }
+    },
+    "exclude_jul_aug_weekdays": {
+      "1": {
+        "absolute_error_sum": 119290,
+        "actual_sum": 1136093,
+        "pred_minus_actual": -29674,
+        "wape_score": 0.895
+      },
+      "7": {
+        "absolute_error_sum": 226838,
+        "actual_sum": 1350573,
+        "pred_minus_actual": 120436,
+        "wape_score": 0.832043
+      },
+      "11": {
+        "absolute_error_sum": 184835,
+        "actual_sum": 1907061,
+        "pred_minus_actual": -6803,
+        "wape_score": 0.903079
+      },
+      "12": {
+        "absolute_error_sum": 175209,
+        "actual_sum": 1983604,
+        "pred_minus_actual": 34679,
+        "wape_score": 0.911671
+      },
+      "17": {
+        "absolute_error_sum": 221498,
+        "actual_sum": 3063025,
+        "pred_minus_actual": -66174,
+        "wape_score": 0.927687
+      },
+      "25": {
+        "absolute_error_sum": 82171,
+        "actual_sum": 464537,
+        "pred_minus_actual": -59375,
+        "wape_score": 0.823112
+      },
+      "26": {
+        "absolute_error_sum": 107336,
+        "actual_sum": 1089964,
+        "pred_minus_actual": -54990,
+        "wape_score": 0.901523
+      },
+      "28": {
+        "absolute_error_sum": 87727,
+        "actual_sum": 602164,
+        "pred_minus_actual": -9209,
+        "wape_score": 0.854314
+      },
+      "50": {
+        "absolute_error_sum": 307806,
+        "actual_sum": 1157460,
+        "pred_minus_actual": 171566,
+        "wape_score": 0.734068
+      },
+      "all": {
+        "absolute_error_sum": 1512710,
+        "actual_sum": 12754481,
+        "pred_minus_actual": 100456,
+        "wape_score": 0.881398
+      }
+    },
+    "only_feb_apr": {
+      "1": {
+        "absolute_error_sum": 117103,
+        "actual_sum": 1136093,
+        "pred_minus_actual": 30261,
+        "wape_score": 0.896925
+      },
+      "7": {
+        "absolute_error_sum": 280356,
+        "actual_sum": 1350573,
+        "pred_minus_actual": 226270,
+        "wape_score": 0.792417
+      },
+      "11": {
+        "absolute_error_sum": 202244,
+        "actual_sum": 1907061,
+        "pred_minus_actual": 109694,
+        "wape_score": 0.89395
+      },
+      "12": {
+        "absolute_error_sum": 212061,
+        "actual_sum": 1983604,
+        "pred_minus_actual": 135025,
+        "wape_score": 0.893093
+      },
+      "17": {
+        "absolute_error_sum": 198939,
+        "actual_sum": 3063025,
+        "pred_minus_actual": 36675,
+        "wape_score": 0.935051
+      },
+      "25": {
+        "absolute_error_sum": 70629,
+        "actual_sum": 464537,
+        "pred_minus_actual": -31357,
+        "wape_score": 0.847958
+      },
+      "26": {
+        "absolute_error_sum": 105709,
+        "actual_sum": 1089964,
+        "pred_minus_actual": 58715,
+        "wape_score": 0.903016
+      },
+      "28": {
+        "absolute_error_sum": 87301,
+        "actual_sum": 602164,
+        "pred_minus_actual": 30185,
+        "wape_score": 0.855021
+      },
+      "50": {
+        "absolute_error_sum": 337216,
+        "actual_sum": 1157460,
+        "pred_minus_actual": 264632,
+        "wape_score": 0.708659
+      },
+      "all": {
+        "absolute_error_sum": 1611558,
+        "actual_sum": 12754481,
+        "pred_minus_actual": 860100,
+        "wape_score": 0.873648
+      }
+    },
+    "only_feb_jun": {
+      "1": {
+        "absolute_error_sum": 119460,
+        "actual_sum": 1136093,
+        "pred_minus_actual": -5756,
+        "wape_score": 0.89485
+      },
+      "7": {
+        "absolute_error_sum": 252793,
+        "actual_sum": 1350573,
+        "pred_minus_actual": 181849,
+        "wape_score": 0.812825
+      },
+      "11": {
+        "absolute_error_sum": 184739,
+        "actual_sum": 1907061,
+        "pred_minus_actual": 33795,
+        "wape_score": 0.903129
+      },
+      "12": {
+        "absolute_error_sum": 182956,
+        "actual_sum": 1983604,
+        "pred_minus_actual": 72516,
+        "wape_score": 0.907766
+      },
+      "17": {
+        "absolute_error_sum": 217124,
+        "actual_sum": 3063025,
+        "pred_minus_actual": -31246,
+        "wape_score": 0.929115
+      },
+      "25": {
+        "absolute_error_sum": 73915,
+        "actual_sum": 464537,
+        "pred_minus_actual": -40915,
+        "wape_score": 0.840885
+      },
+      "26": {
+        "absolute_error_sum": 96985,
+        "actual_sum": 1089964,
+        "pred_minus_actual": -8593,
+        "wape_score": 0.91102
+      },
+      "28": {
+        "absolute_error_sum": 88736,
+        "actual_sum": 602164,
+        "pred_minus_actual": 3980,
+        "wape_score": 0.852638
+      },
+      "50": {
+        "absolute_error_sum": 310389,
+        "actual_sum": 1157460,
+        "pred_minus_actual": 188679,
+        "wape_score": 0.731836
+      },
+      "all": {
+        "absolute_error_sum": 1527097,
+        "actual_sum": 12754481,
+        "pred_minus_actual": 394309,
+        "wape_score": 0.88027
+      }
+    }
+  }
+}
