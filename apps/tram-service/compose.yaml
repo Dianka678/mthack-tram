@@ -1,0 +1,21 @@
+services:
+  tram:
+    build: .
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      AUTH_FILE: /run/secrets/auth.json
+      FORECAST_FILE: /srv/data/forecast.csv
+      FORECAST_LABEL: "конкурсный CSV · оценка 0.87571 со слов команды"
+      COOKIE_SECURE: "false"
+    volumes:
+      - type: bind
+        source: ./secrets/auth.json
+        target: /run/secrets/auth.json
+        read_only: true
+        bind:
+          create_host_path: false
+    read_only: true
+    tmpfs:
+      - /tmp
+    restart: unless-stopped
