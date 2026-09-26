@@ -1,0 +1,355 @@
+{
+  "source": "https://mosmetro.ru/news/details/7732",
+  "published_at": "2025-09-05",
+  "cutoff": "2025-09-05",
+  "validation": [
+    "2025-09-06",
+    "2025-09-28"
+  ],
+  "missing_label_rule": "zero only for competition WAPE; positive labels retained",
+  "changed_rows_per_statistic": 192,
+  "variants": {
+    "mean": {
+      "base": {
+        "1": {
+          "actual_sum": 399708,
+          "absolute_error_sum": 60329,
+          "pred_minus_actual": -32723,
+          "wape_score": 0.849067
+        },
+        "11": {
+          "actual_sum": 715807,
+          "absolute_error_sum": 94935,
+          "pred_minus_actual": -62043,
+          "wape_score": 0.867373
+        },
+        "12": {
+          "actual_sum": 711794,
+          "absolute_error_sum": 74618,
+          "pred_minus_actual": -31012,
+          "wape_score": 0.895169
+        },
+        "17": {
+          "actual_sum": 1092613,
+          "absolute_error_sum": 102146,
+          "pred_minus_actual": -65320,
+          "wape_score": 0.906512
+        },
+        "25": {
+          "actual_sum": 160264,
+          "absolute_error_sum": 26054,
+          "pred_minus_actual": -17844,
+          "wape_score": 0.837431
+        },
+        "26": {
+          "actual_sum": 387106,
+          "absolute_error_sum": 46126,
+          "pred_minus_actual": -35284,
+          "wape_score": 0.880844
+        },
+        "28": {
+          "actual_sum": 201048,
+          "absolute_error_sum": 36811,
+          "pred_minus_actual": 585,
+          "wape_score": 0.816904
+        },
+        "50": {
+          "actual_sum": 367403,
+          "absolute_error_sum": 131894,
+          "pred_minus_actual": 79228,
+          "wape_score": 0.64101
+        },
+        "7": {
+          "actual_sum": 460077,
+          "absolute_error_sum": 100413,
+          "pred_minus_actual": 17015,
+          "wape_score": 0.781747
+        },
+        "all": {
+          "actual_sum": 4495820,
+          "absolute_error_sum": 673326,
+          "pred_minus_actual": -147398,
+          "wape_score": 0.850233
+        },
+        "route_50_weekends": {
+          "actual_sum": 3387,
+          "absolute_error_sum": 96381,
+          "pred_minus_actual": 96381,
+          "wape_score": 0
+        },
+        "route_50_weekends_daytime": {
+          "actual_sum": 3193,
+          "absolute_error_sum": 94379,
+          "pred_minus_actual": 94379,
+          "wape_score": 0
+        }
+      },
+      "shutdown": {
+        "1": {
+          "actual_sum": 399708,
+          "absolute_error_sum": 60329,
+          "pred_minus_actual": -32723,
+          "wape_score": 0.849067
+        },
+        "11": {
+          "actual_sum": 715807,
+          "absolute_error_sum": 94935,
+          "pred_minus_actual": -62043,
+          "wape_score": 0.867373
+        },
+        "12": {
+          "actual_sum": 711794,
+          "absolute_error_sum": 74618,
+          "pred_minus_actual": -31012,
+          "wape_score": 0.895169
+        },
+        "17": {
+          "actual_sum": 1092613,
+          "absolute_error_sum": 102146,
+          "pred_minus_actual": -65320,
+          "wape_score": 0.906512
+        },
+        "25": {
+          "actual_sum": 160264,
+          "absolute_error_sum": 26054,
+          "pred_minus_actual": -17844,
+          "wape_score": 0.837431
+        },
+        "26": {
+          "actual_sum": 387106,
+          "absolute_error_sum": 46126,
+          "pred_minus_actual": -35284,
+          "wape_score": 0.880844
+        },
+        "28": {
+          "actual_sum": 201048,
+          "absolute_error_sum": 36811,
+          "pred_minus_actual": 585,
+          "wape_score": 0.816904
+        },
+        "50": {
+          "actual_sum": 367403,
+          "absolute_error_sum": 38900,
+          "pred_minus_actual": -20540,
+          "wape_score": 0.894122
+        },
+        "7": {
+          "actual_sum": 460077,
+          "absolute_error_sum": 100413,
+          "pred_minus_actual": 17015,
+          "wape_score": 0.781747
+        },
+        "all": {
+          "actual_sum": 4495820,
+          "absolute_error_sum": 580332,
+          "pred_minus_actual": -247166,
+          "wape_score": 0.870917
+        },
+        "route_50_weekends": {
+          "actual_sum": 3387,
+          "absolute_error_sum": 3387,
+          "pred_minus_actual": -3387,
+          "wape_score": 0
+        },
+        "route_50_weekends_daytime": {
+          "actual_sum": 3193,
+          "absolute_error_sum": 3193,
+          "pred_minus_actual": -3193,
+          "wape_score": 0
+        }
+      }
+    },
+    "median": {
+      "base": {
+        "1": {
+          "actual_sum": 399708,
+          "absolute_error_sum": 50609,
+          "pred_minus_actual": -16017,
+          "wape_score": 0.873385
+        },
+        "11": {
+          "actual_sum": 715807,
+          "absolute_error_sum": 81806,
+          "pred_minus_actual": -41548,
+          "wape_score": 0.885715
+        },
+        "12": {
+          "actual_sum": 711794,
+          "absolute_error_sum": 65490,
+          "pred_minus_actual": -1106,
+          "wape_score": 0.907993
+        },
+        "17": {
+          "actual_sum": 1092613,
+          "absolute_error_sum": 76019,
+          "pred_minus_actual": -12197,
+          "wape_score": 0.930425
+        },
+        "25": {
+          "actual_sum": 160264,
+          "absolute_error_sum": 25594,
+          "pred_minus_actual": -17672,
+          "wape_score": 0.840301
+        },
+        "26": {
+          "actual_sum": 387106,
+          "absolute_error_sum": 41643,
+          "pred_minus_actual": -29931,
+          "wape_score": 0.892425
+        },
+        "28": {
+          "actual_sum": 201048,
+          "absolute_error_sum": 35794,
+          "pred_minus_actual": 4642,
+          "wape_score": 0.821963
+        },
+        "50": {
+          "actual_sum": 367403,
+          "absolute_error_sum": 127088,
+          "pred_minus_actual": 99342,
+          "wape_score": 0.654091
+        },
+        "7": {
+          "actual_sum": 460077,
+          "absolute_error_sum": 97309,
+          "pred_minus_actual": 45069,
+          "wape_score": 0.788494
+        },
+        "all": {
+          "actual_sum": 4495820,
+          "absolute_error_sum": 601352,
+          "pred_minus_actual": 30582,
+          "wape_score": 0.866242
+        },
+        "route_50_weekends": {
+          "actual_sum": 3387,
+          "absolute_error_sum": 97385,
+          "pred_minus_actual": 97385,
+          "wape_score": 0
+        },
+        "route_50_weekends_daytime": {
+          "actual_sum": 3193,
+          "absolute_error_sum": 95699,
+          "pred_minus_actual": 95699,
+          "wape_score": 0
+        }
+      },
+      "shutdown": {
+        "1": {
+          "actual_sum": 399708,
+          "absolute_error_sum": 50609,
+          "pred_minus_actual": -16017,
+          "wape_score": 0.873385
+        },
+        "11": {
+          "actual_sum": 715807,
+          "absolute_error_sum": 81806,
+          "pred_minus_actual": -41548,
+          "wape_score": 0.885715
+        },
+        "12": {
+          "actual_sum": 711794,
+          "absolute_error_sum": 65490,
+          "pred_minus_actual": -1106,
+          "wape_score": 0.907993
+        },
+        "17": {
+          "actual_sum": 1092613,
+          "absolute_error_sum": 76019,
+          "pred_minus_actual": -12197,
+          "wape_score": 0.930425
+        },
+        "25": {
+          "actual_sum": 160264,
+          "absolute_error_sum": 25594,
+          "pred_minus_actual": -17672,
+          "wape_score": 0.840301
+        },
+        "26": {
+          "actual_sum": 387106,
+          "absolute_error_sum": 41643,
+          "pred_minus_actual": -29931,
+          "wape_score": 0.892425
+        },
+        "28": {
+          "actual_sum": 201048,
+          "absolute_error_sum": 35794,
+          "pred_minus_actual": 4642,
+          "wape_score": 0.821963
+        },
+        "50": {
+          "actual_sum": 367403,
+          "absolute_error_sum": 33090,
+          "pred_minus_actual": -1430,
+          "wape_score": 0.909935
+        },
+        "7": {
+          "actual_sum": 460077,
+          "absolute_error_sum": 97309,
+          "pred_minus_actual": 45069,
+          "wape_score": 0.788494
+        },
+        "all": {
+          "actual_sum": 4495820,
+          "absolute_error_sum": 507354,
+          "pred_minus_actual": -70190,
+          "wape_score": 0.88715
+        },
+        "route_50_weekends": {
+          "actual_sum": 3387,
+          "absolute_error_sum": 3387,
+          "pred_minus_actual": -3387,
+          "wape_score": 0
+        },
+        "route_50_weekends_daytime": {
+          "actual_sum": 3193,
+          "absolute_error_sum": 3193,
+          "pred_minus_actual": -3193,
+          "wape_score": 0
+        }
+      }
+    }
+  },
+  "affected_day_facts": {
+    "2025-09-06": {
+      "actual_sum": 86,
+      "base_prediction_sum": 13249,
+      "positive_hours": 10
+    },
+    "2025-09-07": {
+      "actual_sum": 20,
+      "base_prediction_sum": 11944,
+      "positive_hours": 4
+    },
+    "2025-09-13": {
+      "actual_sum": 2736,
+      "base_prediction_sum": 13249,
+      "positive_hours": 20
+    },
+    "2025-09-14": {
+      "actual_sum": 15,
+      "base_prediction_sum": 11944,
+      "positive_hours": 1
+    },
+    "2025-09-20": {
+      "actual_sum": 304,
+      "base_prediction_sum": 13249,
+      "positive_hours": 18
+    },
+    "2025-09-21": {
+      "actual_sum": 0,
+      "base_prediction_sum": 11944,
+      "positive_hours": 0
+    },
+    "2025-09-27": {
+      "actual_sum": 20,
+      "base_prediction_sum": 13249,
+      "positive_hours": 1
+    },
+    "2025-09-28": {
+      "actual_sum": 206,
+      "base_prediction_sum": 11944,
+      "positive_hours": 18
+    }
+  }
+}
