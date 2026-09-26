@@ -1,0 +1,219 @@
+{
+  "cutoff": "2025-08-31",
+  "validation": "2025-09-01/2025-10-31",
+  "status": "exploratory; validation previously viewed",
+  "source": {
+    "restored": "https://transport.mos.ru/mostrans/all_news/125800",
+    "weekend_detour": "https://transport.mos.ru/mostrans/all_news/125846"
+  },
+  "metrics": {
+    "school_profile": {
+      "all": {
+        "absolute_error_sum": 1512710,
+        "actual_sum": 12754481,
+        "wape_score": 0.881398
+      },
+      "1": {
+        "absolute_error_sum": 119290,
+        "actual_sum": 1136093,
+        "wape_score": 0.895
+      },
+      "7": {
+        "absolute_error_sum": 226838,
+        "actual_sum": 1350573,
+        "wape_score": 0.832043
+      },
+      "11": {
+        "absolute_error_sum": 184835,
+        "actual_sum": 1907061,
+        "wape_score": 0.903079
+      },
+      "12": {
+        "absolute_error_sum": 175209,
+        "actual_sum": 1983604,
+        "wape_score": 0.911671
+      },
+      "17": {
+        "absolute_error_sum": 221498,
+        "actual_sum": 3063025,
+        "wape_score": 0.927687
+      },
+      "25": {
+        "absolute_error_sum": 82171,
+        "actual_sum": 464537,
+        "wape_score": 0.823112
+      },
+      "26": {
+        "absolute_error_sum": 107336,
+        "actual_sum": 1089964,
+        "wape_score": 0.901523
+      },
+      "28": {
+        "absolute_error_sum": 87727,
+        "actual_sum": 602164,
+        "wape_score": 0.854314
+      },
+      "50": {
+        "absolute_error_sum": 307806,
+        "actual_sum": 1157460,
+        "wape_score": 0.734068
+      }
+    },
+    "aug7_weekends": {
+      "all": {
+        "absolute_error_sum": 1492120,
+        "actual_sum": 12754481,
+        "wape_score": 0.883012
+      },
+      "1": {
+        "absolute_error_sum": 119290,
+        "actual_sum": 1136093,
+        "wape_score": 0.895
+      },
+      "7": {
+        "absolute_error_sum": 206248,
+        "actual_sum": 1350573,
+        "wape_score": 0.847289
+      },
+      "11": {
+        "absolute_error_sum": 184835,
+        "actual_sum": 1907061,
+        "wape_score": 0.903079
+      },
+      "12": {
+        "absolute_error_sum": 175209,
+        "actual_sum": 1983604,
+        "wape_score": 0.911671
+      },
+      "17": {
+        "absolute_error_sum": 221498,
+        "actual_sum": 3063025,
+        "wape_score": 0.927687
+      },
+      "25": {
+        "absolute_error_sum": 82171,
+        "actual_sum": 464537,
+        "wape_score": 0.823112
+      },
+      "26": {
+        "absolute_error_sum": 107336,
+        "actual_sum": 1089964,
+        "wape_score": 0.901523
+      },
+      "28": {
+        "absolute_error_sum": 87727,
+        "actual_sum": 602164,
+        "wape_score": 0.854314
+      },
+      "50": {
+        "absolute_error_sum": 307806,
+        "actual_sum": 1157460,
+        "wape_score": 0.734068
+      }
+    },
+    "aug7_all": {
+      "all": {
+        "absolute_error_sum": 1506700,
+        "actual_sum": 12754481,
+        "wape_score": 0.881869
+      },
+      "1": {
+        "absolute_error_sum": 119290,
+        "actual_sum": 1136093,
+        "wape_score": 0.895
+      },
+      "7": {
+        "absolute_error_sum": 220828,
+        "actual_sum": 1350573,
+        "wape_score": 0.836493
+      },
+      "11": {
+        "absolute_error_sum": 184835,
+        "actual_sum": 1907061,
+        "wape_score": 0.903079
+      },
+      "12": {
+        "absolute_error_sum": 175209,
+        "actual_sum": 1983604,
+        "wape_score": 0.911671
+      },
+      "17": {
+        "absolute_error_sum": 221498,
+        "actual_sum": 3063025,
+        "wape_score": 0.927687
+      },
+      "25": {
+        "absolute_error_sum": 82171,
+        "actual_sum": 464537,
+        "wape_score": 0.823112
+      },
+      "26": {
+        "absolute_error_sum": 107336,
+        "actual_sum": 1089964,
+        "wape_score": 0.901523
+      },
+      "28": {
+        "absolute_error_sum": 87727,
+        "actual_sum": 602164,
+        "wape_score": 0.854314
+      },
+      "50": {
+        "absolute_error_sum": 307806,
+        "actual_sum": 1157460,
+        "wape_score": 0.734068
+      }
+    },
+    "aug7_50_all": {
+      "all": {
+        "absolute_error_sum": 1509866,
+        "actual_sum": 12754481,
+        "wape_score": 0.881621
+      },
+      "1": {
+        "absolute_error_sum": 119290,
+        "actual_sum": 1136093,
+        "wape_score": 0.895
+      },
+      "7": {
+        "absolute_error_sum": 220828,
+        "actual_sum": 1350573,
+        "wape_score": 0.836493
+      },
+      "11": {
+        "absolute_error_sum": 184835,
+        "actual_sum": 1907061,
+        "wape_score": 0.903079
+      },
+      "12": {
+        "absolute_error_sum": 175209,
+        "actual_sum": 1983604,
+        "wape_score": 0.911671
+      },
+      "17": {
+        "absolute_error_sum": 221498,
+        "actual_sum": 3063025,
+        "wape_score": 0.927687
+      },
+      "25": {
+        "absolute_error_sum": 82171,
+        "actual_sum": 464537,
+        "wape_score": 0.823112
+      },
+      "26": {
+        "absolute_error_sum": 107336,
+        "actual_sum": 1089964,
+        "wape_score": 0.901523
+      },
+      "28": {
+        "absolute_error_sum": 87727,
+        "actual_sum": 602164,
+        "wape_score": 0.854314
+      },
+      "50": {
+        "absolute_error_sum": 310972,
+        "actual_sum": 1157460,
+        "wape_score": 0.731332
+      }
+    }
+  }
+}
