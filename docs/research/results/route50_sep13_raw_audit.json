@@ -1,0 +1,265 @@
+{
+  "source": "upload/test.zip::test.csv",
+  "rows_scanned": 13391571,
+  "route_50_invalid_event_time": 0,
+  "sep13_status_counts": {
+    "1": 2736,
+    "10": 20,
+    "23": 2,
+    "31": 17,
+    "33": 26,
+    "40": 1,
+    "61": 1,
+    "90": 64
+  },
+  "sep13_status_transaction_type_counts": [
+    {
+      "status": "1",
+      "transaction_type": "49",
+      "rows": 21
+    },
+    {
+      "status": "1",
+      "transaction_type": "52",
+      "rows": 2155
+    },
+    {
+      "status": "1",
+      "transaction_type": "60",
+      "rows": 222
+    },
+    {
+      "status": "1",
+      "transaction_type": "65",
+      "rows": 104
+    },
+    {
+      "status": "1",
+      "transaction_type": "75",
+      "rows": 234
+    },
+    {
+      "status": "10",
+      "transaction_type": "52",
+      "rows": 16
+    },
+    {
+      "status": "10",
+      "transaction_type": "60",
+      "rows": 4
+    },
+    {
+      "status": "23",
+      "transaction_type": "52",
+      "rows": 2
+    },
+    {
+      "status": "31",
+      "transaction_type": "52",
+      "rows": 17
+    },
+    {
+      "status": "33",
+      "transaction_type": "60",
+      "rows": 26
+    },
+    {
+      "status": "40",
+      "transaction_type": "52",
+      "rows": 1
+    },
+    {
+      "status": "61",
+      "transaction_type": "52",
+      "rows": 1
+    },
+    {
+      "status": "90",
+      "transaction_type": "75",
+      "rows": 64
+    }
+  ],
+  "sep13_hourly": [
+    {
+      "hour": 0,
+      "raw_success": 25,
+      "label": 25,
+      "difference": 0
+    },
+    {
+      "hour": 1,
+      "raw_success": 0,
+      "label": 0,
+      "difference": 0
+    },
+    {
+      "hour": 2,
+      "raw_success": 0,
+      "label": 0,
+      "difference": 0
+    },
+    {
+      "hour": 3,
+      "raw_success": 0,
+      "label": 0,
+      "difference": 0
+    },
+    {
+      "hour": 4,
+      "raw_success": 0,
+      "label": 0,
+      "difference": 0
+    },
+    {
+      "hour": 5,
+      "raw_success": 6,
+      "label": 6,
+      "difference": 0
+    },
+    {
+      "hour": 6,
+      "raw_success": 159,
+      "label": 159,
+      "difference": 0
+    },
+    {
+      "hour": 7,
+      "raw_success": 429,
+      "label": 429,
+      "difference": 0
+    },
+    {
+      "hour": 8,
+      "raw_success": 639,
+      "label": 639,
+      "difference": 0
+    },
+    {
+      "hour": 9,
+      "raw_success": 427,
+      "label": 427,
+      "difference": 0
+    },
+    {
+      "hour": 10,
+      "raw_success": 381,
+      "label": 381,
+      "difference": 0
+    },
+    {
+      "hour": 11,
+      "raw_success": 96,
+      "label": 96,
+      "difference": 0
+    },
+    {
+      "hour": 12,
+      "raw_success": 79,
+      "label": 79,
+      "difference": 0
+    },
+    {
+      "hour": 13,
+      "raw_success": 78,
+      "label": 78,
+      "difference": 0
+    },
+    {
+      "hour": 14,
+      "raw_success": 87,
+      "label": 87,
+      "difference": 0
+    },
+    {
+      "hour": 15,
+      "raw_success": 31,
+      "label": 31,
+      "difference": 0
+    },
+    {
+      "hour": 16,
+      "raw_success": 14,
+      "label": 14,
+      "difference": 0
+    },
+    {
+      "hour": 17,
+      "raw_success": 50,
+      "label": 50,
+      "difference": 0
+    },
+    {
+      "hour": 18,
+      "raw_success": 70,
+      "label": 70,
+      "difference": 0
+    },
+    {
+      "hour": 19,
+      "raw_success": 18,
+      "label": 18,
+      "difference": 0
+    },
+    {
+      "hour": 20,
+      "raw_success": 68,
+      "label": 68,
+      "difference": 0
+    },
+    {
+      "hour": 21,
+      "raw_success": 26,
+      "label": 26,
+      "difference": 0
+    },
+    {
+      "hour": 22,
+      "raw_success": 16,
+      "label": 16,
+      "difference": 0
+    },
+    {
+      "hour": 23,
+      "raw_success": 37,
+      "label": 37,
+      "difference": 0
+    }
+  ],
+  "weekend_daily": [
+    {
+      "date": "2025-09-06",
+      "raw_success": 86,
+      "label": 86
+    },
+    {
+      "date": "2025-09-07",
+      "raw_success": 20,
+      "label": 20
+    },
+    {
+      "date": "2025-09-13",
+      "raw_success": 2736,
+      "label": 2736
+    },
+    {
+      "date": "2025-09-14",
+      "raw_success": 15,
+      "label": 15
+    },
+    {
+      "date": "2025-09-20",
+      "raw_success": 304,
+      "label": 304
+    },
+    {
+      "date": "2025-09-27",
+      "raw_success": 20,
+      "label": 20
+    },
+    {
+      "date": "2025-09-28",
+      "raw_success": 206,
+      "label": 206
+    }
+  ]
+}
