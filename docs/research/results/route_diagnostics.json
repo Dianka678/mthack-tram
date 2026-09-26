@@ -1,0 +1,247 @@
+{
+  "method": "Descriptive comparison only; no causal or out-of-sample effect estimated",
+  "candidate_service_hours": "06:00–22:00; verify against historical schedules",
+  "routes_in_labels": [
+    1,
+    7,
+    11,
+    12,
+    17,
+    25,
+    26,
+    28,
+    50
+  ],
+  "route_7_windows": {
+    "before": {
+      "from": "2025-06-12",
+      "to": "2025-07-09",
+      "days": 28,
+      "route_7_total": 570940,
+      "other_routes_total": 4440066,
+      "route_7_per_day": 20390.7,
+      "route_7_to_others": 0.12859
+    },
+    "restriction": {
+      "from": "2025-07-10",
+      "to": "2025-08-10",
+      "days": 32,
+      "route_7_total": 308876,
+      "other_routes_total": 4984080,
+      "route_7_per_day": 9652.4,
+      "route_7_to_others": 0.06197
+    },
+    "after": {
+      "from": "2025-08-11",
+      "to": "2025-09-07",
+      "days": 28,
+      "route_7_total": 532462,
+      "other_routes_total": 4607448,
+      "route_7_per_day": 19016.5,
+      "route_7_to_others": 0.11557
+    }
+  },
+  "missing_active_hours_count": 125,
+  "missing_active_hours_by_route": {
+    "50": 125
+  },
+  "missing_active_hours_by_date": [
+    {
+      "route": 50,
+      "date": "2025-09-06",
+      "hours": [
+        7,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "route": 50,
+      "date": "2025-09-07",
+      "hours": [
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        19,
+        20,
+        22
+      ]
+    },
+    {
+      "route": 50,
+      "date": "2025-09-14",
+      "hours": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "route": 50,
+      "date": "2025-09-20",
+      "hours": [
+        6
+      ]
+    },
+    {
+      "route": 50,
+      "date": "2025-09-21",
+      "hours": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "route": 50,
+      "date": "2025-09-27",
+      "hours": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "route": 50,
+      "date": "2025-10-04",
+      "hours": [
+        6,
+        7,
+        8,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "route": 50,
+      "date": "2025-10-05",
+      "hours": [
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "route": 50,
+      "date": "2025-10-12",
+      "hours": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "route": 50,
+      "date": "2025-10-18",
+      "hours": [
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "route": 50,
+      "date": "2025-10-19",
+      "hours": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "route": 50,
+      "date": "2025-10-25",
+      "hours": [
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        21
+      ]
+    }
+  ]
+}
