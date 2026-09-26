@@ -1,0 +1,455 @@
+{
+  "cutoff": "2025-09-19",
+  "validation": [
+    "2025-09-20",
+    "2025-09-28"
+  ],
+  "event_dates": [
+    "2025-09-20",
+    "2025-09-21",
+    "2025-09-27",
+    "2025-09-28"
+  ],
+  "news": {
+    "route50_published": "2025-09-05",
+    "route50_url": "https://mosmetro.ru/news/details/7732",
+    "route7_published": "2025-09-19",
+    "route7_url": "https://transport.mos.ru/mostrans/all_news/126405"
+  },
+  "route7_scenario_transfer": {
+    "normal_weekend_mean": 13119.625,
+    "shortened_weekend_mean": 7227.6,
+    "factor": 0.5508998923368618,
+    "normal_days": 8,
+    "shortened_days": 10
+  },
+  "training_rule": "missing labels filled zero; full history 2025-01-01 to cutoff",
+  "predictions": {
+    "mean": {
+      "7": {
+        "2025-09-20": {
+          "actual": 9702,
+          "baseline": 16110,
+          "shutdown_50": 16110,
+          "shutdown_50_and_7_transfer_scenario": 8875
+        },
+        "2025-09-21": {
+          "actual": 8203,
+          "baseline": 14303,
+          "shutdown_50": 14303,
+          "shutdown_50_and_7_transfer_scenario": 7880
+        },
+        "2025-09-27": {
+          "actual": 9049,
+          "baseline": 16110,
+          "shutdown_50": 16110,
+          "shutdown_50_and_7_transfer_scenario": 8875
+        },
+        "2025-09-28": {
+          "actual": 7590,
+          "baseline": 14303,
+          "shutdown_50": 14303,
+          "shutdown_50_and_7_transfer_scenario": 7880
+        }
+      },
+      "50": {
+        "2025-09-20": {
+          "actual": 304,
+          "baseline": 12630,
+          "shutdown_50": 0,
+          "shutdown_50_and_7_transfer_scenario": 0
+        },
+        "2025-09-21": {
+          "actual": 0,
+          "baseline": 11405,
+          "shutdown_50": 0,
+          "shutdown_50_and_7_transfer_scenario": 0
+        },
+        "2025-09-27": {
+          "actual": 20,
+          "baseline": 12630,
+          "shutdown_50": 0,
+          "shutdown_50_and_7_transfer_scenario": 0
+        },
+        "2025-09-28": {
+          "actual": 206,
+          "baseline": 11405,
+          "shutdown_50": 0,
+          "shutdown_50_and_7_transfer_scenario": 0
+        }
+      }
+    },
+    "median": {
+      "7": {
+        "2025-09-20": {
+          "actual": 9702,
+          "baseline": 16910,
+          "shutdown_50": 16910,
+          "shutdown_50_and_7_transfer_scenario": 9314
+        },
+        "2025-09-21": {
+          "actual": 8203,
+          "baseline": 15039,
+          "shutdown_50": 15039,
+          "shutdown_50_and_7_transfer_scenario": 8286
+        },
+        "2025-09-27": {
+          "actual": 9049,
+          "baseline": 16910,
+          "shutdown_50": 16910,
+          "shutdown_50_and_7_transfer_scenario": 9314
+        },
+        "2025-09-28": {
+          "actual": 7590,
+          "baseline": 15039,
+          "shutdown_50": 15039,
+          "shutdown_50_and_7_transfer_scenario": 8286
+        }
+      },
+      "50": {
+        "2025-09-20": {
+          "actual": 304,
+          "baseline": 13169,
+          "shutdown_50": 0,
+          "shutdown_50_and_7_transfer_scenario": 0
+        },
+        "2025-09-21": {
+          "actual": 0,
+          "baseline": 11820,
+          "shutdown_50": 0,
+          "shutdown_50_and_7_transfer_scenario": 0
+        },
+        "2025-09-27": {
+          "actual": 20,
+          "baseline": 13169,
+          "shutdown_50": 0,
+          "shutdown_50_and_7_transfer_scenario": 0
+        },
+        "2025-09-28": {
+          "actual": 206,
+          "baseline": 11820,
+          "shutdown_50": 0,
+          "shutdown_50_and_7_transfer_scenario": 0
+        }
+      }
+    }
+  },
+  "metrics": {
+    "mean": {
+      "baseline": {
+        "all": {
+          "actual_sum": 1646526,
+          "absolute_error_sum": 271287,
+          "wape_score": 0.835237
+        },
+        "1": {
+          "actual_sum": 145225,
+          "absolute_error_sum": 22127,
+          "wape_score": 0.847636
+        },
+        "7": {
+          "actual_sum": 162093,
+          "absolute_error_sum": 40991,
+          "wape_score": 0.747114
+        },
+        "11": {
+          "actual_sum": 270371,
+          "absolute_error_sum": 34186,
+          "wape_score": 0.873559
+        },
+        "12": {
+          "actual_sum": 258388,
+          "absolute_error_sum": 26350,
+          "wape_score": 0.898022
+        },
+        "17": {
+          "actual_sum": 417286,
+          "absolute_error_sum": 43058,
+          "wape_score": 0.896814
+        },
+        "25": {
+          "actual_sum": 60601,
+          "absolute_error_sum": 9755,
+          "wape_score": 0.839029
+        },
+        "26": {
+          "actual_sum": 145669,
+          "absolute_error_sum": 17079,
+          "wape_score": 0.882755
+        },
+        "28": {
+          "actual_sum": 64570,
+          "absolute_error_sum": 18066,
+          "wape_score": 0.720211
+        },
+        "50": {
+          "actual_sum": 122323,
+          "absolute_error_sum": 59675,
+          "wape_score": 0.512152
+        }
+      },
+      "shutdown_50": {
+        "all": {
+          "actual_sum": 1646526,
+          "absolute_error_sum": 224277,
+          "wape_score": 0.863788
+        },
+        "1": {
+          "actual_sum": 145225,
+          "absolute_error_sum": 22127,
+          "wape_score": 0.847636
+        },
+        "7": {
+          "actual_sum": 162093,
+          "absolute_error_sum": 40991,
+          "wape_score": 0.747114
+        },
+        "11": {
+          "actual_sum": 270371,
+          "absolute_error_sum": 34186,
+          "wape_score": 0.873559
+        },
+        "12": {
+          "actual_sum": 258388,
+          "absolute_error_sum": 26350,
+          "wape_score": 0.898022
+        },
+        "17": {
+          "actual_sum": 417286,
+          "absolute_error_sum": 43058,
+          "wape_score": 0.896814
+        },
+        "25": {
+          "actual_sum": 60601,
+          "absolute_error_sum": 9755,
+          "wape_score": 0.839029
+        },
+        "26": {
+          "actual_sum": 145669,
+          "absolute_error_sum": 17079,
+          "wape_score": 0.882755
+        },
+        "28": {
+          "actual_sum": 64570,
+          "absolute_error_sum": 18066,
+          "wape_score": 0.720211
+        },
+        "50": {
+          "actual_sum": 122323,
+          "absolute_error_sum": 12665,
+          "wape_score": 0.896463
+        }
+      },
+      "shutdown_50_and_7_transfer_scenario": {
+        "all": {
+          "actual_sum": 1646526,
+          "absolute_error_sum": 202459,
+          "wape_score": 0.877039
+        },
+        "1": {
+          "actual_sum": 145225,
+          "absolute_error_sum": 22127,
+          "wape_score": 0.847636
+        },
+        "7": {
+          "actual_sum": 162093,
+          "absolute_error_sum": 19173,
+          "wape_score": 0.881716
+        },
+        "11": {
+          "actual_sum": 270371,
+          "absolute_error_sum": 34186,
+          "wape_score": 0.873559
+        },
+        "12": {
+          "actual_sum": 258388,
+          "absolute_error_sum": 26350,
+          "wape_score": 0.898022
+        },
+        "17": {
+          "actual_sum": 417286,
+          "absolute_error_sum": 43058,
+          "wape_score": 0.896814
+        },
+        "25": {
+          "actual_sum": 60601,
+          "absolute_error_sum": 9755,
+          "wape_score": 0.839029
+        },
+        "26": {
+          "actual_sum": 145669,
+          "absolute_error_sum": 17079,
+          "wape_score": 0.882755
+        },
+        "28": {
+          "actual_sum": 64570,
+          "absolute_error_sum": 18066,
+          "wape_score": 0.720211
+        },
+        "50": {
+          "actual_sum": 122323,
+          "absolute_error_sum": 12665,
+          "wape_score": 0.896463
+        }
+      }
+    },
+    "median": {
+      "baseline": {
+        "all": {
+          "actual_sum": 1646526,
+          "absolute_error_sum": 252246,
+          "wape_score": 0.846801
+        },
+        "1": {
+          "actual_sum": 145225,
+          "absolute_error_sum": 19257,
+          "wape_score": 0.867399
+        },
+        "7": {
+          "actual_sum": 162093,
+          "absolute_error_sum": 41119,
+          "wape_score": 0.746325
+        },
+        "11": {
+          "actual_sum": 270371,
+          "absolute_error_sum": 29211,
+          "wape_score": 0.89196
+        },
+        "12": {
+          "actual_sum": 258388,
+          "absolute_error_sum": 25922,
+          "wape_score": 0.899678
+        },
+        "17": {
+          "actual_sum": 417286,
+          "absolute_error_sum": 34002,
+          "wape_score": 0.918516
+        },
+        "25": {
+          "actual_sum": 60601,
+          "absolute_error_sum": 9412,
+          "wape_score": 0.844689
+        },
+        "26": {
+          "actual_sum": 145669,
+          "absolute_error_sum": 15288,
+          "wape_score": 0.89505
+        },
+        "28": {
+          "actual_sum": 64570,
+          "absolute_error_sum": 18998,
+          "wape_score": 0.705777
+        },
+        "50": {
+          "actual_sum": 122323,
+          "absolute_error_sum": 59037,
+          "wape_score": 0.517368
+        }
+      },
+      "shutdown_50": {
+        "all": {
+          "actual_sum": 1646526,
+          "absolute_error_sum": 203328,
+          "wape_score": 0.876511
+        },
+        "1": {
+          "actual_sum": 145225,
+          "absolute_error_sum": 19257,
+          "wape_score": 0.867399
+        },
+        "7": {
+          "actual_sum": 162093,
+          "absolute_error_sum": 41119,
+          "wape_score": 0.746325
+        },
+        "11": {
+          "actual_sum": 270371,
+          "absolute_error_sum": 29211,
+          "wape_score": 0.89196
+        },
+        "12": {
+          "actual_sum": 258388,
+          "absolute_error_sum": 25922,
+          "wape_score": 0.899678
+        },
+        "17": {
+          "actual_sum": 417286,
+          "absolute_error_sum": 34002,
+          "wape_score": 0.918516
+        },
+        "25": {
+          "actual_sum": 60601,
+          "absolute_error_sum": 9412,
+          "wape_score": 0.844689
+        },
+        "26": {
+          "actual_sum": 145669,
+          "absolute_error_sum": 15288,
+          "wape_score": 0.89505
+        },
+        "28": {
+          "actual_sum": 64570,
+          "absolute_error_sum": 18998,
+          "wape_score": 0.705777
+        },
+        "50": {
+          "actual_sum": 122323,
+          "absolute_error_sum": 10119,
+          "wape_score": 0.917276
+        }
+      },
+      "shutdown_50_and_7_transfer_scenario": {
+        "all": {
+          "actual_sum": 1646526,
+          "absolute_error_sum": 178428,
+          "wape_score": 0.891634
+        },
+        "1": {
+          "actual_sum": 145225,
+          "absolute_error_sum": 19257,
+          "wape_score": 0.867399
+        },
+        "7": {
+          "actual_sum": 162093,
+          "absolute_error_sum": 16219,
+          "wape_score": 0.89994
+        },
+        "11": {
+          "actual_sum": 270371,
+          "absolute_error_sum": 29211,
+          "wape_score": 0.89196
+        },
+        "12": {
+          "actual_sum": 258388,
+          "absolute_error_sum": 25922,
+          "wape_score": 0.899678
+        },
+        "17": {
+          "actual_sum": 417286,
+          "absolute_error_sum": 34002,
+          "wape_score": 0.918516
+        },
+        "25": {
+          "actual_sum": 60601,
+          "absolute_error_sum": 9412,
+          "wape_score": 0.844689
+        },
+        "26": {
+          "actual_sum": 145669,
+          "absolute_error_sum": 15288,
+          "wape_score": 0.89505
+        },
+        "28": {
+          "actual_sum": 64570,
+          "absolute_error_sum": 18998,
+          "wape_score": 0.705777
+        },
+        "50": {
+          "actual_sum": 122323,
+          "absolute_error_sum": 10119,
+          "wape_score": 0.917276
+        }
+      }
+    }
+  }
+}
