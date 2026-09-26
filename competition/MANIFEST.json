@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "candidate": "ds2_school_regime_20260926",
+  "as_of": "2025-10-31",
+  "period": [
+    "2025-11-01",
+    "2025-12-31"
+  ],
+  "rows": 14640,
+  "local_sep_oct_score_exploratory": 0.886109,
+  "platform_score_this_candidate": null,
+  "input_sha256": {
+    "train": "20a61009b4ee00327784c6fa888109609fd3a1905ea3a8509b36964dd9baced7",
+    "test": "37479acea3e319ac613d72df7217bbe57b66af49644e538139174fd534ce2347",
+    "sample": "71c8126bb51068c936462a170da885bad860fc91a58b3d2ac731876d324d7ec3"
+  },
+  "artifact_sha256": {
+    "model.py": "362ef253121458a93f0bde7b2847e570453885a50d0179c2d690d1d0080e4cce",
+    "model.json": "084e31a7af5dbb09383b4ecfe8295caf298c3665945dd37a8b65aebe48c6b94b",
+    "submission.csv": "224025fce9bfa79766580058837fafd0d84272ccb7aee48d9cefa580953dfe2f"
+  }
+}
