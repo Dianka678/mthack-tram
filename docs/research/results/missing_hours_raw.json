@@ -1,0 +1,764 @@
+{
+  "raw_rows_read": 13391571,
+  "scope": "2025-09-01 through 2025-10-31, 06:00-22:00",
+  "candidate_hours_not_in_labels": 125,
+  "candidate_hours_with_any_raw_transaction": 0,
+  "candidate_hours_with_success": 0,
+  "oracle_125_hour_error_removed_from_aug31_median": 86001,
+  "oracle_score_gain_if_future_missing_keys_known": 0.006743,
+  "raw_status_totals": {},
+  "raw_transaction_types": [],
+  "missing_hours": [
+    {
+      "route": 50,
+      "date": "2025-09-06",
+      "hour": 7,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-06",
+      "hour": 15,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-06",
+      "hour": 16,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-06",
+      "hour": 17,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-06",
+      "hour": 18,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-06",
+      "hour": 19,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-06",
+      "hour": 20,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-06",
+      "hour": 21,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-06",
+      "hour": 22,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-07",
+      "hour": 6,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-07",
+      "hour": 7,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-07",
+      "hour": 8,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-07",
+      "hour": 9,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-07",
+      "hour": 11,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-07",
+      "hour": 12,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-07",
+      "hour": 13,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-07",
+      "hour": 14,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-07",
+      "hour": 15,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-07",
+      "hour": 17,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-07",
+      "hour": 19,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-07",
+      "hour": 20,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-07",
+      "hour": 22,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-14",
+      "hour": 6,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-14",
+      "hour": 7,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-14",
+      "hour": 8,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-14",
+      "hour": 9,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-14",
+      "hour": 10,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-14",
+      "hour": 11,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-14",
+      "hour": 12,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-14",
+      "hour": 13,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-14",
+      "hour": 14,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-14",
+      "hour": 15,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-14",
+      "hour": 16,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-14",
+      "hour": 17,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-14",
+      "hour": 18,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-14",
+      "hour": 19,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-14",
+      "hour": 20,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-14",
+      "hour": 21,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-14",
+      "hour": 22,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-20",
+      "hour": 6,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-21",
+      "hour": 6,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-21",
+      "hour": 7,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-21",
+      "hour": 8,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-21",
+      "hour": 9,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-21",
+      "hour": 10,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-21",
+      "hour": 11,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-21",
+      "hour": 12,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-21",
+      "hour": 13,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-21",
+      "hour": 14,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-21",
+      "hour": 15,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-21",
+      "hour": 16,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-21",
+      "hour": 17,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-21",
+      "hour": 18,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-21",
+      "hour": 19,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-21",
+      "hour": 20,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-21",
+      "hour": 21,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-21",
+      "hour": 22,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-27",
+      "hour": 6,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-27",
+      "hour": 7,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-27",
+      "hour": 8,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-27",
+      "hour": 9,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-27",
+      "hour": 10,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-27",
+      "hour": 11,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-27",
+      "hour": 12,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-27",
+      "hour": 13,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-27",
+      "hour": 14,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-27",
+      "hour": 15,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-27",
+      "hour": 16,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-27",
+      "hour": 17,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-27",
+      "hour": 18,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-27",
+      "hour": 19,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-27",
+      "hour": 20,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-27",
+      "hour": 21,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-09-27",
+      "hour": 22,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-04",
+      "hour": 6,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-04",
+      "hour": 7,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-04",
+      "hour": 8,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-04",
+      "hour": 19,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-04",
+      "hour": 20,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-04",
+      "hour": 21,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-04",
+      "hour": 22,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-05",
+      "hour": 6,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-05",
+      "hour": 7,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-05",
+      "hour": 8,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-05",
+      "hour": 9,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-05",
+      "hour": 12,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-05",
+      "hour": 13,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-05",
+      "hour": 14,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-05",
+      "hour": 15,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-12",
+      "hour": 6,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-12",
+      "hour": 7,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-12",
+      "hour": 8,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-12",
+      "hour": 9,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-12",
+      "hour": 10,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-12",
+      "hour": 11,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-12",
+      "hour": 12,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-12",
+      "hour": 13,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-12",
+      "hour": 14,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-12",
+      "hour": 15,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-12",
+      "hour": 16,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-12",
+      "hour": 17,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-12",
+      "hour": 18,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-12",
+      "hour": 19,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-12",
+      "hour": 20,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-12",
+      "hour": 21,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-12",
+      "hour": 22,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-18",
+      "hour": 18,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-18",
+      "hour": 19,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-18",
+      "hour": 20,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-18",
+      "hour": 21,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-18",
+      "hour": 22,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-19",
+      "hour": 6,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-19",
+      "hour": 7,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-19",
+      "hour": 8,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-19",
+      "hour": 9,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-25",
+      "hour": 6,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-25",
+      "hour": 7,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-25",
+      "hour": 8,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-25",
+      "hour": 12,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-25",
+      "hour": 13,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-25",
+      "hour": 14,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-25",
+      "hour": 15,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-25",
+      "hour": 16,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-25",
+      "hour": 19,
+      "raw_statuses": {}
+    },
+    {
+      "route": 50,
+      "date": "2025-10-25",
+      "hour": 21,
+      "raw_statuses": {}
+    }
+  ],
+  "limitations": "No vehicle schedule or validator heartbeat; no raw transaction does not prove whether service ran."
+}

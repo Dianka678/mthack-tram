@@ -1,0 +1,50 @@
+{
+  "cutoff": "2025-08-31",
+  "holdout": [
+    "2025-09-01",
+    "2025-10-31"
+  ],
+  "hour_grid": "9 routes × 61 dates × 24 hours; missing label=0 for metric only",
+  "baseline": {
+    "score": 0.867992,
+    "absolute_error": 1683697,
+    "actual_sum": 12754481
+  },
+  "exclude_summer_weekdays": {
+    "score": 0.881398,
+    "absolute_error": 1512710,
+    "actual_sum": 12754481
+  },
+  "delta_score": 0.013406,
+  "selection_note": "Exploratory: rule compared on this same holdout; no independent confirmation.",
+  "stops": {
+    "workbook_route_stop_rows": 622,
+    "labeled_route_stop_rows": 315,
+    "labeled_routes_with_future_reference": [
+      1,
+      7,
+      11,
+      12
+    ],
+    "valid_as_of": {
+      "2025-04-30": {
+        "rows": 0,
+        "routes": []
+      },
+      "2025-06-30": {
+        "rows": 0,
+        "routes": []
+      },
+      "2025-08-31": {
+        "rows": 0,
+        "routes": []
+      },
+      "2025-10-31": {
+        "rows": 0,
+        "routes": []
+      }
+    },
+    "stop_level_target_available": false,
+    "poi_effect_estimable": false
+  }
+}

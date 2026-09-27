@@ -1,0 +1,2842 @@
+{
+  "source_branch": "ds1/forecast-submission",
+  "source_commit": "613da6c8e5134107af4094db45f4433a0ced76e1",
+  "ds1_code_sha256": {
+    "core.py": "b4dcfb9e2c63894da8d1550e35d64ae94862b748691d8a3caa53d18fab979d5b",
+    "models.py": "376481f75d2ceb653d4ca1904308042e6af536b2b9809e7751b9f8fc57be7387"
+  },
+  "input_sha256": {
+    "train": "20a61009b4ee00327784c6fa888109609fd3a1905ea3a8509b36964dd9baced7",
+    "test": "37479acea3e319ac613d72df7217bbe57b66af49644e538139174fd534ce2347"
+  },
+  "metric": "1 - sum(abs(error))/sum(truth), clipped at zero",
+  "policy": "missing target row = zero for score; full hours; no validation truth in model features",
+  "folds": {
+    "may_jun": {
+      "mean_zero": {
+        "all": {
+          "rows": 13176,
+          "actual_sum": 11555908,
+          "absolute_error_sum": 2114993,
+          "pred_minus_actual": 915085,
+          "missing_label_rows": 1550,
+          "wape": 0.1830226581935405,
+          "wape_score": 0.8169773418064595
+        },
+        "hours:day_06_22": {
+          "rows": 9333,
+          "actual_sum": 11339250,
+          "absolute_error_sum": 2063139,
+          "pred_minus_actual": 937283,
+          "missing_label_rows": 0,
+          "wape": 0.18194668959587273,
+          "wape_score": 0.8180533104041272
+        },
+        "hours:night_23_05": {
+          "rows": 3843,
+          "actual_sum": 216658,
+          "absolute_error_sum": 51854,
+          "pred_minus_actual": -22198,
+          "missing_label_rows": 1550,
+          "wape": 0.23933572727524485,
+          "wape_score": 0.7606642727247551
+        },
+        "hours:other": {
+          "rows": 10980,
+          "actual_sum": 7974584,
+          "absolute_error_sum": 1408236,
+          "pred_minus_actual": 471454,
+          "missing_label_rows": 1550,
+          "wape": 0.1765905281077985,
+          "wape_score": 0.8234094718922015
+        },
+        "hours:train_peaks": {
+          "rows": 2196,
+          "actual_sum": 3581324,
+          "absolute_error_sum": 706757,
+          "pred_minus_actual": 443631,
+          "missing_label_rows": 0,
+          "wape": 0.19734517178563013,
+          "wape_score": 0.8026548282143698
+        },
+        "labels:missing_assumed_zero": {
+          "rows": 1550,
+          "actual_sum": 0,
+          "absolute_error_sum": 1416,
+          "pred_minus_actual": 1416,
+          "missing_label_rows": 1550,
+          "wape": null,
+          "wape_score": null
+        },
+        "labels:observed": {
+          "rows": 11626,
+          "actual_sum": 11555908,
+          "absolute_error_sum": 2113577,
+          "pred_minus_actual": 913669,
+          "missing_label_rows": 0,
+          "wape": 0.18290012346931112,
+          "wape_score": 0.8170998765306889
+        },
+        "month:2025-05": {
+          "rows": 6696,
+          "actual_sum": 6000921,
+          "absolute_error_sum": 1138812,
+          "pred_minus_actual": 361578,
+          "missing_label_rows": 787,
+          "wape": 0.1897728698644758,
+          "wape_score": 0.8102271301355242
+        },
+        "month:2025-06": {
+          "rows": 6480,
+          "actual_sum": 5554987,
+          "absolute_error_sum": 976181,
+          "pred_minus_actual": 553507,
+          "missing_label_rows": 763,
+          "wape": 0.17573056426594696,
+          "wape_score": 0.824269435734053
+        },
+        "route:1": {
+          "rows": 1464,
+          "actual_sum": 973184,
+          "absolute_error_sum": 197787,
+          "pred_minus_actual": 89317,
+          "missing_label_rows": 225,
+          "wape": 0.20323700348546625,
+          "wape_score": 0.7967629965145338
+        },
+        "route:11": {
+          "rows": 1464,
+          "actual_sum": 1728497,
+          "absolute_error_sum": 275456,
+          "pred_minus_actual": 115122,
+          "missing_label_rows": 183,
+          "wape": 0.15936157251068414,
+          "wape_score": 0.8406384274893158
+        },
+        "route:12": {
+          "rows": 1464,
+          "actual_sum": 1802631,
+          "absolute_error_sum": 342752,
+          "pred_minus_actual": 125904,
+          "missing_label_rows": 128,
+          "wape": 0.19013985668725325,
+          "wape_score": 0.8098601433127468
+        },
+        "route:17": {
+          "rows": 1464,
+          "actual_sum": 2755004,
+          "absolute_error_sum": 368394,
+          "pred_minus_actual": 74914,
+          "missing_label_rows": 123,
+          "wape": 0.13371813616241573,
+          "wape_score": 0.8662818638375842
+        },
+        "route:25": {
+          "rows": 1464,
+          "actual_sum": 389497,
+          "absolute_error_sum": 81014,
+          "pred_minus_actual": 13496,
+          "missing_label_rows": 269,
+          "wape": 0.2079964672385153,
+          "wape_score": 0.7920035327614847
+        },
+        "route:26": {
+          "rows": 1464,
+          "actual_sum": 901318,
+          "absolute_error_sum": 197870,
+          "pred_minus_actual": 154520,
+          "missing_label_rows": 127,
+          "wape": 0.21953406012084525,
+          "wape_score": 0.7804659398791547
+        },
+        "route:28": {
+          "rows": 1464,
+          "actual_sum": 535227,
+          "absolute_error_sum": 122156,
+          "pred_minus_actual": 58798,
+          "missing_label_rows": 232,
+          "wape": 0.22823213328176642,
+          "wape_score": 0.7717678667182336
+        },
+        "route:50": {
+          "rows": 1464,
+          "actual_sum": 1116223,
+          "absolute_error_sum": 254115,
+          "pred_minus_actual": 161737,
+          "missing_label_rows": 130,
+          "wape": 0.2276561224773186,
+          "wape_score": 0.7723438775226814
+        },
+        "route:7": {
+          "rows": 1464,
+          "actual_sum": 1354327,
+          "absolute_error_sum": 275449,
+          "pred_minus_actual": 121277,
+          "missing_label_rows": 133,
+          "wape": 0.20338441159335965,
+          "wape_score": 0.7966155884066404
+        },
+        "elapsed_seconds": 0.105
+      },
+      "median_zero": {
+        "all": {
+          "rows": 13176,
+          "actual_sum": 11555908,
+          "absolute_error_sum": 2331823,
+          "pred_minus_actual": 1563743,
+          "missing_label_rows": 1550,
+          "wape": 0.20178622052027415,
+          "wape_score": 0.7982137794797258
+        },
+        "hours:day_06_22": {
+          "rows": 9333,
+          "actual_sum": 11339250,
+          "absolute_error_sum": 2281229,
+          "pred_minus_actual": 1584811,
+          "missing_label_rows": 0,
+          "wape": 0.2011798840311308,
+          "wape_score": 0.7988201159688693
+        },
+        "hours:night_23_05": {
+          "rows": 3843,
+          "actual_sum": 216658,
+          "absolute_error_sum": 50594,
+          "pred_minus_actual": -21068,
+          "missing_label_rows": 1550,
+          "wape": 0.23352011003517065,
+          "wape_score": 0.7664798899648293
+        },
+        "hours:other": {
+          "rows": 10980,
+          "actual_sum": 7974584,
+          "absolute_error_sum": 1507267,
+          "pred_minus_actual": 845127,
+          "missing_label_rows": 1550,
+          "wape": 0.1890088561359439,
+          "wape_score": 0.8109911438640561
+        },
+        "hours:train_peaks": {
+          "rows": 2196,
+          "actual_sum": 3581324,
+          "absolute_error_sum": 824556,
+          "pred_minus_actual": 718616,
+          "missing_label_rows": 0,
+          "wape": 0.23023775564567742,
+          "wape_score": 0.7697622443543226
+        },
+        "labels:missing_assumed_zero": {
+          "rows": 1550,
+          "actual_sum": 0,
+          "absolute_error_sum": 501,
+          "pred_minus_actual": 501,
+          "missing_label_rows": 1550,
+          "wape": null,
+          "wape_score": null
+        },
+        "labels:observed": {
+          "rows": 11626,
+          "actual_sum": 11555908,
+          "absolute_error_sum": 2331322,
+          "pred_minus_actual": 1563242,
+          "missing_label_rows": 0,
+          "wape": 0.20174286607335398,
+          "wape_score": 0.798257133926646
+        },
+        "month:2025-05": {
+          "rows": 6696,
+          "actual_sum": 6000921,
+          "absolute_error_sum": 1184433,
+          "pred_minus_actual": 692147,
+          "missing_label_rows": 787,
+          "wape": 0.19737520290635388,
+          "wape_score": 0.8026247970936461
+        },
+        "month:2025-06": {
+          "rows": 6480,
+          "actual_sum": 5554987,
+          "absolute_error_sum": 1147390,
+          "pred_minus_actual": 871596,
+          "missing_label_rows": 763,
+          "wape": 0.2065513384639784,
+          "wape_score": 0.7934486615360216
+        },
+        "route:1": {
+          "rows": 1464,
+          "actual_sum": 973184,
+          "absolute_error_sum": 214850,
+          "pred_minus_actual": 150440,
+          "missing_label_rows": 225,
+          "wape": 0.22077017295804288,
+          "wape_score": 0.7792298270419571
+        },
+        "route:11": {
+          "rows": 1464,
+          "actual_sum": 1728497,
+          "absolute_error_sum": 307107,
+          "pred_minus_actual": 210789,
+          "missing_label_rows": 183,
+          "wape": 0.17767285682300865,
+          "wape_score": 0.8223271431769914
+        },
+        "route:12": {
+          "rows": 1464,
+          "actual_sum": 1802631,
+          "absolute_error_sum": 365639,
+          "pred_minus_actual": 242533,
+          "missing_label_rows": 128,
+          "wape": 0.20283629872114703,
+          "wape_score": 0.7971637012788529
+        },
+        "route:17": {
+          "rows": 1464,
+          "actual_sum": 2755004,
+          "absolute_error_sum": 427071,
+          "pred_minus_actual": 287209,
+          "missing_label_rows": 123,
+          "wape": 0.15501647184541292,
+          "wape_score": 0.8449835281545871
+        },
+        "route:25": {
+          "rows": 1464,
+          "actual_sum": 389497,
+          "absolute_error_sum": 85721,
+          "pred_minus_actual": 19123,
+          "missing_label_rows": 269,
+          "wape": 0.22008128432311416,
+          "wape_score": 0.7799187156768859
+        },
+        "route:26": {
+          "rows": 1464,
+          "actual_sum": 901318,
+          "absolute_error_sum": 220733,
+          "pred_minus_actual": 184449,
+          "missing_label_rows": 127,
+          "wape": 0.244900246084068,
+          "wape_score": 0.755099753915932
+        },
+        "route:28": {
+          "rows": 1464,
+          "actual_sum": 535227,
+          "absolute_error_sum": 131441,
+          "pred_minus_actual": 78671,
+          "missing_label_rows": 232,
+          "wape": 0.24557991282203626,
+          "wape_score": 0.7544200871779637
+        },
+        "route:50": {
+          "rows": 1464,
+          "actual_sum": 1116223,
+          "absolute_error_sum": 292479,
+          "pred_minus_actual": 245977,
+          "missing_label_rows": 130,
+          "wape": 0.26202559882747445,
+          "wape_score": 0.7379744011725256
+        },
+        "route:7": {
+          "rows": 1464,
+          "actual_sum": 1354327,
+          "absolute_error_sum": 286782,
+          "pred_minus_actual": 144552,
+          "missing_label_rows": 133,
+          "wape": 0.21175240543827303,
+          "wape_score": 0.788247594561727
+        },
+        "elapsed_seconds": 0.089
+      },
+      "mean_observed": {
+        "all": {
+          "rows": 13176,
+          "actual_sum": 11555908,
+          "absolute_error_sum": 2273464,
+          "pred_minus_actual": 1076044,
+          "missing_label_rows": 1550,
+          "wape": 0.1967360764727445,
+          "wape_score": 0.8032639235272555
+        },
+        "hours:day_06_22": {
+          "rows": 9333,
+          "actual_sum": 11339250,
+          "absolute_error_sum": 2063139,
+          "pred_minus_actual": 937283,
+          "missing_label_rows": 0,
+          "wape": 0.18194668959587273,
+          "wape_score": 0.8180533104041272
+        },
+        "hours:night_23_05": {
+          "rows": 3843,
+          "actual_sum": 216658,
+          "absolute_error_sum": 210325,
+          "pred_minus_actual": 138761,
+          "missing_label_rows": 1550,
+          "wape": 0.9707696000147699,
+          "wape_score": 0.029230399985230138
+        },
+        "hours:other": {
+          "rows": 10980,
+          "actual_sum": 7974584,
+          "absolute_error_sum": 1566707,
+          "pred_minus_actual": 632413,
+          "missing_label_rows": 1550,
+          "wape": 0.19646253647839185,
+          "wape_score": 0.8035374635216082
+        },
+        "hours:train_peaks": {
+          "rows": 2196,
+          "actual_sum": 3581324,
+          "absolute_error_sum": 706757,
+          "pred_minus_actual": 443631,
+          "missing_label_rows": 0,
+          "wape": 0.19734517178563013,
+          "wape_score": 0.8026548282143698
+        },
+        "labels:missing_assumed_zero": {
+          "rows": 1550,
+          "actual_sum": 0,
+          "absolute_error_sum": 158580,
+          "pred_minus_actual": 158580,
+          "missing_label_rows": 1550,
+          "wape": null,
+          "wape_score": null
+        },
+        "labels:observed": {
+          "rows": 11626,
+          "actual_sum": 11555908,
+          "absolute_error_sum": 2114884,
+          "pred_minus_actual": 917464,
+          "missing_label_rows": 0,
+          "wape": 0.18301322578892112,
+          "wape_score": 0.8169867742110789
+        },
+        "month:2025-05": {
+          "rows": 6696,
+          "actual_sum": 6000921,
+          "absolute_error_sum": 1219214,
+          "pred_minus_actual": 443294,
+          "missing_label_rows": 787,
+          "wape": 0.203171146562336,
+          "wape_score": 0.796828853437664
+        },
+        "month:2025-06": {
+          "rows": 6480,
+          "actual_sum": 5554987,
+          "absolute_error_sum": 1054250,
+          "pred_minus_actual": 632750,
+          "missing_label_rows": 763,
+          "wape": 0.1897844225378025,
+          "wape_score": 0.8102155774621975
+        },
+        "route:1": {
+          "rows": 1464,
+          "actual_sum": 973184,
+          "absolute_error_sum": 206369,
+          "pred_minus_actual": 97965,
+          "missing_label_rows": 225,
+          "wape": 0.21205547974483757,
+          "wape_score": 0.7879445202551625
+        },
+        "route:11": {
+          "rows": 1464,
+          "actual_sum": 1728497,
+          "absolute_error_sum": 278598,
+          "pred_minus_actual": 118476,
+          "missing_label_rows": 183,
+          "wape": 0.16117933673011872,
+          "wape_score": 0.8388206632698813
+        },
+        "route:12": {
+          "rows": 1464,
+          "actual_sum": 1802631,
+          "absolute_error_sum": 431470,
+          "pred_minus_actual": 214718,
+          "missing_label_rows": 128,
+          "wape": 0.23935569731131884,
+          "wape_score": 0.7606443026886811
+        },
+        "route:17": {
+          "rows": 1464,
+          "actual_sum": 2755004,
+          "absolute_error_sum": 371414,
+          "pred_minus_actual": 78882,
+          "missing_label_rows": 123,
+          "wape": 0.13481432331858684,
+          "wape_score": 0.8651856766814132
+        },
+        "route:25": {
+          "rows": 1464,
+          "actual_sum": 389497,
+          "absolute_error_sum": 123310,
+          "pred_minus_actual": 56046,
+          "missing_label_rows": 269,
+          "wape": 0.3165878042706362,
+          "wape_score": 0.6834121957293637
+        },
+        "route:26": {
+          "rows": 1464,
+          "actual_sum": 901318,
+          "absolute_error_sum": 201778,
+          "pred_minus_actual": 158670,
+          "missing_label_rows": 127,
+          "wape": 0.22386993269855923,
+          "wape_score": 0.7761300673014407
+        },
+        "route:28": {
+          "rows": 1464,
+          "actual_sum": 535227,
+          "absolute_error_sum": 125916,
+          "pred_minus_actual": 62840,
+          "missing_label_rows": 232,
+          "wape": 0.23525718993996939,
+          "wape_score": 0.7647428100600306
+        },
+        "route:50": {
+          "rows": 1464,
+          "actual_sum": 1116223,
+          "absolute_error_sum": 256245,
+          "pred_minus_actual": 163961,
+          "missing_label_rows": 130,
+          "wape": 0.22956434332566164,
+          "wape_score": 0.7704356566743383
+        },
+        "route:7": {
+          "rows": 1464,
+          "actual_sum": 1354327,
+          "absolute_error_sum": 278364,
+          "pred_minus_actual": 124486,
+          "missing_label_rows": 133,
+          "wape": 0.2055367721384865,
+          "wape_score": 0.7944632278615135
+        },
+        "elapsed_seconds": 0.089
+      },
+      "median_observed": {
+        "all": {
+          "rows": 13176,
+          "actual_sum": 11555908,
+          "absolute_error_sum": 2485492,
+          "pred_minus_actual": 1718716,
+          "missing_label_rows": 1550,
+          "wape": 0.2150840937812935,
+          "wape_score": 0.7849159062187065
+        },
+        "hours:day_06_22": {
+          "rows": 9333,
+          "actual_sum": 11339250,
+          "absolute_error_sum": 2281229,
+          "pred_minus_actual": 1584811,
+          "missing_label_rows": 0,
+          "wape": 0.2011798840311308,
+          "wape_score": 0.7988201159688693
+        },
+        "hours:night_23_05": {
+          "rows": 3843,
+          "actual_sum": 216658,
+          "absolute_error_sum": 204263,
+          "pred_minus_actual": 133905,
+          "missing_label_rows": 1550,
+          "wape": 0.9427900192930794,
+          "wape_score": 0.05720998070692063
+        },
+        "hours:other": {
+          "rows": 10980,
+          "actual_sum": 7974584,
+          "absolute_error_sum": 1660936,
+          "pred_minus_actual": 1000100,
+          "missing_label_rows": 1550,
+          "wape": 0.20827870143445726,
+          "wape_score": 0.7917212985655427
+        },
+        "hours:train_peaks": {
+          "rows": 2196,
+          "actual_sum": 3581324,
+          "absolute_error_sum": 824556,
+          "pred_minus_actual": 718616,
+          "missing_label_rows": 0,
+          "wape": 0.23023775564567742,
+          "wape_score": 0.7697622443543226
+        },
+        "labels:missing_assumed_zero": {
+          "rows": 1550,
+          "actual_sum": 0,
+          "absolute_error_sum": 152799,
+          "pred_minus_actual": 152799,
+          "missing_label_rows": 1550,
+          "wape": null,
+          "wape_score": null
+        },
+        "labels:observed": {
+          "rows": 11626,
+          "actual_sum": 11555908,
+          "absolute_error_sum": 2332693,
+          "pred_minus_actual": 1565917,
+          "missing_label_rows": 0,
+          "wape": 0.20186150668558456,
+          "wape_score": 0.7981384933144154
+        },
+        "month:2025-05": {
+          "rows": 6696,
+          "actual_sum": 6000921,
+          "absolute_error_sum": 1262452,
+          "pred_minus_actual": 770818,
+          "missing_label_rows": 787,
+          "wape": 0.21037637389327404,
+          "wape_score": 0.789623626106726
+        },
+        "month:2025-06": {
+          "rows": 6480,
+          "actual_sum": 5554987,
+          "absolute_error_sum": 1223040,
+          "pred_minus_actual": 947898,
+          "missing_label_rows": 763,
+          "wape": 0.22016973217039032,
+          "wape_score": 0.7798302678296096
+        },
+        "route:1": {
+          "rows": 1464,
+          "actual_sum": 973184,
+          "absolute_error_sum": 223255,
+          "pred_minus_actual": 158905,
+          "missing_label_rows": 225,
+          "wape": 0.22940677199789558,
+          "wape_score": 0.7705932280021044
+        },
+        "route:11": {
+          "rows": 1464,
+          "actual_sum": 1728497,
+          "absolute_error_sum": 309594,
+          "pred_minus_actual": 213330,
+          "missing_label_rows": 183,
+          "wape": 0.179111679106183,
+          "wape_score": 0.820888320893817
+        },
+        "route:12": {
+          "rows": 1464,
+          "actual_sum": 1802631,
+          "absolute_error_sum": 452059,
+          "pred_minus_actual": 329011,
+          "missing_label_rows": 128,
+          "wape": 0.2507773360160787,
+          "wape_score": 0.7492226639839212
+        },
+        "route:17": {
+          "rows": 1464,
+          "actual_sum": 2755004,
+          "absolute_error_sum": 430364,
+          "pred_minus_actual": 290702,
+          "missing_label_rows": 123,
+          "wape": 0.15621175141669486,
+          "wape_score": 0.8437882485833051
+        },
+        "route:25": {
+          "rows": 1464,
+          "actual_sum": 389497,
+          "absolute_error_sum": 126946,
+          "pred_minus_actual": 60674,
+          "missing_label_rows": 269,
+          "wape": 0.3259229211008044,
+          "wape_score": 0.6740770788991957
+        },
+        "route:26": {
+          "rows": 1464,
+          "actual_sum": 901318,
+          "absolute_error_sum": 223577,
+          "pred_minus_actual": 187413,
+          "missing_label_rows": 127,
+          "wape": 0.24805562520664182,
+          "wape_score": 0.7519443747933582
+        },
+        "route:28": {
+          "rows": 1464,
+          "actual_sum": 535227,
+          "absolute_error_sum": 135524,
+          "pred_minus_actual": 82992,
+          "missing_label_rows": 232,
+          "wape": 0.25320845174103696,
+          "wape_score": 0.7467915482589631
+        },
+        "route:50": {
+          "rows": 1464,
+          "actual_sum": 1116223,
+          "absolute_error_sum": 294543,
+          "pred_minus_actual": 248141,
+          "missing_label_rows": 130,
+          "wape": 0.2638746917058688,
+          "wape_score": 0.7361253082941313
+        },
+        "route:7": {
+          "rows": 1464,
+          "actual_sum": 1354327,
+          "absolute_error_sum": 289630,
+          "pred_minus_actual": 147548,
+          "missing_label_rows": 133,
+          "wape": 0.21385529491769714,
+          "wape_score": 0.7861447050823028
+        },
+        "elapsed_seconds": 0.08
+      },
+      "mean_56d": {
+        "all": {
+          "rows": 13176,
+          "actual_sum": 11555908,
+          "absolute_error_sum": 2366189,
+          "pred_minus_actual": 1582667,
+          "missing_label_rows": 1550,
+          "wape": 0.2047601105858579,
+          "wape_score": 0.7952398894141421
+        },
+        "hours:day_06_22": {
+          "rows": 9333,
+          "actual_sum": 11339250,
+          "absolute_error_sum": 2315093,
+          "pred_minus_actual": 1595731,
+          "missing_label_rows": 0,
+          "wape": 0.2041663249333069,
+          "wape_score": 0.7958336750666931
+        },
+        "hours:night_23_05": {
+          "rows": 3843,
+          "actual_sum": 216658,
+          "absolute_error_sum": 51096,
+          "pred_minus_actual": -13064,
+          "missing_label_rows": 1550,
+          "wape": 0.235837125792724,
+          "wape_score": 0.764162874207276
+        },
+        "hours:other": {
+          "rows": 10980,
+          "actual_sum": 7974584,
+          "absolute_error_sum": 1561358,
+          "pred_minus_actual": 929888,
+          "missing_label_rows": 1550,
+          "wape": 0.19579178048660595,
+          "wape_score": 0.804208219513394
+        },
+        "hours:train_peaks": {
+          "rows": 2196,
+          "actual_sum": 3581324,
+          "absolute_error_sum": 804831,
+          "pred_minus_actual": 652779,
+          "missing_label_rows": 0,
+          "wape": 0.22473001604993015,
+          "wape_score": 0.7752699839500699
+        },
+        "labels:missing_assumed_zero": {
+          "rows": 1550,
+          "actual_sum": 0,
+          "absolute_error_sum": 1755,
+          "pred_minus_actual": 1755,
+          "missing_label_rows": 1550,
+          "wape": null,
+          "wape_score": null
+        },
+        "labels:observed": {
+          "rows": 11626,
+          "actual_sum": 11555908,
+          "absolute_error_sum": 2364434,
+          "pred_minus_actual": 1580912,
+          "missing_label_rows": 0,
+          "wape": 0.20460824021790414,
+          "wape_score": 0.7953917597820959
+        },
+        "month:2025-05": {
+          "rows": 6696,
+          "actual_sum": 6000921,
+          "absolute_error_sum": 1206121,
+          "pred_minus_actual": 703169,
+          "missing_label_rows": 787,
+          "wape": 0.20098931480684382,
+          "wape_score": 0.7990106851931562
+        },
+        "month:2025-06": {
+          "rows": 6480,
+          "actual_sum": 5554987,
+          "absolute_error_sum": 1160068,
+          "pred_minus_actual": 879498,
+          "missing_label_rows": 763,
+          "wape": 0.20883361203185535,
+          "wape_score": 0.7911663879681446
+        },
+        "route:1": {
+          "rows": 1464,
+          "actual_sum": 973184,
+          "absolute_error_sum": 216420,
+          "pred_minus_actual": 168520,
+          "missing_label_rows": 225,
+          "wape": 0.2223834341707221,
+          "wape_score": 0.777616565829278
+        },
+        "route:11": {
+          "rows": 1464,
+          "actual_sum": 1728497,
+          "absolute_error_sum": 296413,
+          "pred_minus_actual": 195777,
+          "missing_label_rows": 183,
+          "wape": 0.17148597885908973,
+          "wape_score": 0.8285140211409103
+        },
+        "route:12": {
+          "rows": 1464,
+          "actual_sum": 1802631,
+          "absolute_error_sum": 346955,
+          "pred_minus_actual": 211823,
+          "missing_label_rows": 128,
+          "wape": 0.19247144867696162,
+          "wape_score": 0.8075285513230384
+        },
+        "route:17": {
+          "rows": 1464,
+          "actual_sum": 2755004,
+          "absolute_error_sum": 356268,
+          "pred_minus_actual": 43404,
+          "missing_label_rows": 123,
+          "wape": 0.1293166906472731,
+          "wape_score": 0.8706833093527269
+        },
+        "route:25": {
+          "rows": 1464,
+          "actual_sum": 389497,
+          "absolute_error_sum": 92707,
+          "pred_minus_actual": 58399,
+          "missing_label_rows": 269,
+          "wape": 0.23801723761672106,
+          "wape_score": 0.7619827623832789
+        },
+        "route:26": {
+          "rows": 1464,
+          "actual_sum": 901318,
+          "absolute_error_sum": 297821,
+          "pred_minus_actual": 284983,
+          "missing_label_rows": 127,
+          "wape": 0.33042832829256713,
+          "wape_score": 0.6695716717074329
+        },
+        "route:28": {
+          "rows": 1464,
+          "actual_sum": 535227,
+          "absolute_error_sum": 139027,
+          "pred_minus_actual": 98551,
+          "missing_label_rows": 232,
+          "wape": 0.25975333830318725,
+          "wape_score": 0.7402466616968127
+        },
+        "route:50": {
+          "rows": 1464,
+          "actual_sum": 1116223,
+          "absolute_error_sum": 283848,
+          "pred_minus_actual": 237712,
+          "missing_label_rows": 130,
+          "wape": 0.2542932729391887,
+          "wape_score": 0.7457067270608113
+        },
+        "route:7": {
+          "rows": 1464,
+          "actual_sum": 1354327,
+          "absolute_error_sum": 336730,
+          "pred_minus_actual": 283498,
+          "missing_label_rows": 133,
+          "wape": 0.24863271573261111,
+          "wape_score": 0.7513672842673889
+        },
+        "elapsed_seconds": 0.086
+      },
+      "hgb_direct": {
+        "all": {
+          "rows": 13176,
+          "actual_sum": 11555908,
+          "absolute_error_sum": 2275126,
+          "pred_minus_actual": 1512548,
+          "missing_label_rows": 1550,
+          "wape": 0.19687989900923406,
+          "wape_score": 0.8031201009907659
+        },
+        "hours:day_06_22": {
+          "rows": 9333,
+          "actual_sum": 11339250,
+          "absolute_error_sum": 2216697,
+          "pred_minus_actual": 1525073,
+          "missing_label_rows": 0,
+          "wape": 0.19548885508300815,
+          "wape_score": 0.8045111449169918
+        },
+        "hours:night_23_05": {
+          "rows": 3843,
+          "actual_sum": 216658,
+          "absolute_error_sum": 58429,
+          "pred_minus_actual": -12525,
+          "missing_label_rows": 1550,
+          "wape": 0.2696830950161083,
+          "wape_score": 0.7303169049838917
+        },
+        "hours:other": {
+          "rows": 10980,
+          "actual_sum": 7974584,
+          "absolute_error_sum": 1511233,
+          "pred_minus_actual": 916463,
+          "missing_label_rows": 1550,
+          "wape": 0.1895061861534094,
+          "wape_score": 0.8104938138465906
+        },
+        "hours:train_peaks": {
+          "rows": 2196,
+          "actual_sum": 3581324,
+          "absolute_error_sum": 763893,
+          "pred_minus_actual": 596085,
+          "missing_label_rows": 0,
+          "wape": 0.2132990480615549,
+          "wape_score": 0.7867009519384451
+        },
+        "labels:missing_assumed_zero": {
+          "rows": 1550,
+          "actual_sum": 0,
+          "absolute_error_sum": 525,
+          "pred_minus_actual": 525,
+          "missing_label_rows": 1550,
+          "wape": null,
+          "wape_score": null
+        },
+        "labels:observed": {
+          "rows": 11626,
+          "actual_sum": 11555908,
+          "absolute_error_sum": 2274601,
+          "pred_minus_actual": 1512023,
+          "missing_label_rows": 0,
+          "wape": 0.19683446770258123,
+          "wape_score": 0.8031655322974187
+        },
+        "month:2025-05": {
+          "rows": 6696,
+          "actual_sum": 6000921,
+          "absolute_error_sum": 1170581,
+          "pred_minus_actual": 671143,
+          "missing_label_rows": 787,
+          "wape": 0.1950668905656315,
+          "wape_score": 0.8049331094343685
+        },
+        "month:2025-06": {
+          "rows": 6480,
+          "actual_sum": 5554987,
+          "absolute_error_sum": 1104545,
+          "pred_minus_actual": 841405,
+          "missing_label_rows": 763,
+          "wape": 0.19883844912688364,
+          "wape_score": 0.8011615508731164
+        },
+        "route:1": {
+          "rows": 1464,
+          "actual_sum": 973184,
+          "absolute_error_sum": 202628,
+          "pred_minus_actual": 155098,
+          "missing_label_rows": 225,
+          "wape": 0.2082113968170459,
+          "wape_score": 0.7917886031829541
+        },
+        "route:11": {
+          "rows": 1464,
+          "actual_sum": 1728497,
+          "absolute_error_sum": 301046,
+          "pred_minus_actual": 204856,
+          "missing_label_rows": 183,
+          "wape": 0.17416634220366017,
+          "wape_score": 0.8258336577963399
+        },
+        "route:12": {
+          "rows": 1464,
+          "actual_sum": 1802631,
+          "absolute_error_sum": 323880,
+          "pred_minus_actual": 204846,
+          "missing_label_rows": 128,
+          "wape": 0.17967071463876966,
+          "wape_score": 0.8203292853612303
+        },
+        "route:17": {
+          "rows": 1464,
+          "actual_sum": 2755004,
+          "absolute_error_sum": 374975,
+          "pred_minus_actual": 138203,
+          "missing_label_rows": 123,
+          "wape": 0.13610688042558197,
+          "wape_score": 0.8638931195744181
+        },
+        "route:25": {
+          "rows": 1464,
+          "actual_sum": 389497,
+          "absolute_error_sum": 96181,
+          "pred_minus_actual": 54743,
+          "missing_label_rows": 269,
+          "wape": 0.24693643340000052,
+          "wape_score": 0.7530635665999995
+        },
+        "route:26": {
+          "rows": 1464,
+          "actual_sum": 901318,
+          "absolute_error_sum": 251897,
+          "pred_minus_actual": 217437,
+          "missing_label_rows": 127,
+          "wape": 0.27947627807277786,
+          "wape_score": 0.7205237219272221
+        },
+        "route:28": {
+          "rows": 1464,
+          "actual_sum": 535227,
+          "absolute_error_sum": 137583,
+          "pred_minus_actual": 89139,
+          "missing_label_rows": 232,
+          "wape": 0.2570554176078561,
+          "wape_score": 0.7429445823921439
+        },
+        "route:50": {
+          "rows": 1464,
+          "actual_sum": 1116223,
+          "absolute_error_sum": 297923,
+          "pred_minus_actual": 248839,
+          "missing_label_rows": 130,
+          "wape": 0.26690276046990613,
+          "wape_score": 0.7330972395300939
+        },
+        "route:7": {
+          "rows": 1464,
+          "actual_sum": 1354327,
+          "absolute_error_sum": 289013,
+          "pred_minus_actual": 199387,
+          "missing_label_rows": 133,
+          "wape": 0.2133997180887629,
+          "wape_score": 0.7866002819112371
+        },
+        "elapsed_seconds": 2.483
+      },
+      "hgb_recursive": {
+        "all": {
+          "rows": 13176,
+          "actual_sum": 11555908,
+          "absolute_error_sum": 2557074,
+          "pred_minus_actual": 479858,
+          "missing_label_rows": 1550,
+          "wape": 0.22127850100571933,
+          "wape_score": 0.7787214989942807
+        },
+        "hours:day_06_22": {
+          "rows": 9333,
+          "actual_sum": 11339250,
+          "absolute_error_sum": 2470271,
+          "pred_minus_actual": 539071,
+          "missing_label_rows": 0,
+          "wape": 0.21785135701214808,
+          "wape_score": 0.7821486429878519
+        },
+        "hours:night_23_05": {
+          "rows": 3843,
+          "actual_sum": 216658,
+          "absolute_error_sum": 86803,
+          "pred_minus_actual": -59213,
+          "missing_label_rows": 1550,
+          "wape": 0.40064525657949396,
+          "wape_score": 0.599354743420506
+        },
+        "hours:other": {
+          "rows": 10980,
+          "actual_sum": 7974584,
+          "absolute_error_sum": 1745857,
+          "pred_minus_actual": 197159,
+          "missing_label_rows": 1550,
+          "wape": 0.21892765817000612,
+          "wape_score": 0.7810723418299939
+        },
+        "hours:train_peaks": {
+          "rows": 2196,
+          "actual_sum": 3581324,
+          "absolute_error_sum": 811217,
+          "pred_minus_actual": 282699,
+          "missing_label_rows": 0,
+          "wape": 0.2265131554698765,
+          "wape_score": 0.7734868445301235
+        },
+        "labels:missing_assumed_zero": {
+          "rows": 1550,
+          "actual_sum": 0,
+          "absolute_error_sum": 304,
+          "pred_minus_actual": 304,
+          "missing_label_rows": 1550,
+          "wape": null,
+          "wape_score": null
+        },
+        "labels:observed": {
+          "rows": 11626,
+          "actual_sum": 11555908,
+          "absolute_error_sum": 2556770,
+          "pred_minus_actual": 479554,
+          "missing_label_rows": 0,
+          "wape": 0.22125219411577177,
+          "wape_score": 0.7787478058842282
+        },
+        "month:2025-05": {
+          "rows": 6696,
+          "actual_sum": 6000921,
+          "absolute_error_sum": 1352008,
+          "pred_minus_actual": 242542,
+          "missing_label_rows": 787,
+          "wape": 0.22530008310391023,
+          "wape_score": 0.7746999168960897
+        },
+        "month:2025-06": {
+          "rows": 6480,
+          "actual_sum": 5554987,
+          "absolute_error_sum": 1205066,
+          "pred_minus_actual": 237316,
+          "missing_label_rows": 763,
+          "wape": 0.216934081033853,
+          "wape_score": 0.783065918966147
+        },
+        "route:1": {
+          "rows": 1464,
+          "actual_sum": 973184,
+          "absolute_error_sum": 192473,
+          "pred_minus_actual": 86561,
+          "missing_label_rows": 225,
+          "wape": 0.1977765766802578,
+          "wape_score": 0.8022234233197422
+        },
+        "route:11": {
+          "rows": 1464,
+          "actual_sum": 1728497,
+          "absolute_error_sum": 311425,
+          "pred_minus_actual": 177815,
+          "missing_label_rows": 183,
+          "wape": 0.18017098091578984,
+          "wape_score": 0.8198290190842101
+        },
+        "route:12": {
+          "rows": 1464,
+          "actual_sum": 1802631,
+          "absolute_error_sum": 352117,
+          "pred_minus_actual": 210043,
+          "missing_label_rows": 128,
+          "wape": 0.19533504083753137,
+          "wape_score": 0.8046649591624686
+        },
+        "route:17": {
+          "rows": 1464,
+          "actual_sum": 2755004,
+          "absolute_error_sum": 718751,
+          "pred_minus_actual": -414013,
+          "missing_label_rows": 123,
+          "wape": 0.2608892763858056,
+          "wape_score": 0.7391107236141944
+        },
+        "route:25": {
+          "rows": 1464,
+          "actual_sum": 389497,
+          "absolute_error_sum": 98003,
+          "pred_minus_actual": 29875,
+          "missing_label_rows": 269,
+          "wape": 0.2516142614705633,
+          "wape_score": 0.7483857385294367
+        },
+        "route:26": {
+          "rows": 1464,
+          "actual_sum": 901318,
+          "absolute_error_sum": 209475,
+          "pred_minus_actual": 86175,
+          "missing_label_rows": 127,
+          "wape": 0.23240964898071492,
+          "wape_score": 0.7675903510192851
+        },
+        "route:28": {
+          "rows": 1464,
+          "actual_sum": 535227,
+          "absolute_error_sum": 133293,
+          "pred_minus_actual": 36303,
+          "missing_label_rows": 232,
+          "wape": 0.24904012689942773,
+          "wape_score": 0.7509598731005722
+        },
+        "route:50": {
+          "rows": 1464,
+          "actual_sum": 1116223,
+          "absolute_error_sum": 262940,
+          "pred_minus_actual": 162122,
+          "missing_label_rows": 130,
+          "wape": 0.23556224876212012,
+          "wape_score": 0.7644377512378799
+        },
+        "route:7": {
+          "rows": 1464,
+          "actual_sum": 1354327,
+          "absolute_error_sum": 278597,
+          "pred_minus_actual": 104977,
+          "missing_label_rows": 133,
+          "wape": 0.20570881330727364,
+          "wape_score": 0.7942911866927264
+        },
+        "elapsed_seconds": 0.78
+      }
+    },
+    "jul_aug": {
+      "mean_zero": {
+        "all": {
+          "rows": 13392,
+          "actual_sum": 10717653,
+          "absolute_error_sum": 2319855,
+          "pred_minus_actual": 1666637,
+          "missing_label_rows": 1654,
+          "wape": 0.2164517735366129,
+          "wape_score": 0.7835482264633871
+        },
+        "hours:day_06_22": {
+          "rows": 9486,
+          "actual_sum": 10502721,
+          "absolute_error_sum": 2269819,
+          "pred_minus_actual": 1676197,
+          "missing_label_rows": 0,
+          "wape": 0.21611723285803747,
+          "wape_score": 0.7838827671419626
+        },
+        "hours:night_23_05": {
+          "rows": 3906,
+          "actual_sum": 214932,
+          "absolute_error_sum": 50036,
+          "pred_minus_actual": -9560,
+          "missing_label_rows": 1654,
+          "wape": 0.23279921091321906,
+          "wape_score": 0.7672007890867809
+        },
+        "hours:other": {
+          "rows": 11160,
+          "actual_sum": 7364475,
+          "absolute_error_sum": 1605121,
+          "pred_minus_actual": 1071763,
+          "missing_label_rows": 1654,
+          "wape": 0.21795457245764294,
+          "wape_score": 0.7820454275423571
+        },
+        "hours:train_peaks": {
+          "rows": 2232,
+          "actual_sum": 3353178,
+          "absolute_error_sum": 714734,
+          "pred_minus_actual": 594874,
+          "missing_label_rows": 0,
+          "wape": 0.21315122549414317,
+          "wape_score": 0.7868487745058568
+        },
+        "labels:missing_assumed_zero": {
+          "rows": 1654,
+          "actual_sum": 0,
+          "absolute_error_sum": 1471,
+          "pred_minus_actual": 1471,
+          "missing_label_rows": 1654,
+          "wape": null,
+          "wape_score": null
+        },
+        "labels:observed": {
+          "rows": 11738,
+          "actual_sum": 10717653,
+          "absolute_error_sum": 2318384,
+          "pred_minus_actual": 1665166,
+          "missing_label_rows": 0,
+          "wape": 0.21631452333827192,
+          "wape_score": 0.783685476661728
+        },
+        "month:2025-07": {
+          "rows": 6696,
+          "actual_sum": 5407676,
+          "absolute_error_sum": 1250711,
+          "pred_minus_actual": 869371,
+          "missing_label_rows": 818,
+          "wape": 0.2312843816826304,
+          "wape_score": 0.7687156183173696
+        },
+        "month:2025-08": {
+          "rows": 6696,
+          "actual_sum": 5309977,
+          "absolute_error_sum": 1069144,
+          "pred_minus_actual": 797266,
+          "missing_label_rows": 836,
+          "wape": 0.2013462581852991,
+          "wape_score": 0.7986537418147008
+        },
+        "route:1": {
+          "rows": 1488,
+          "actual_sum": 911227,
+          "absolute_error_sum": 160575,
+          "pred_minus_actual": 140537,
+          "missing_label_rows": 216,
+          "wape": 0.17621843953263017,
+          "wape_score": 0.8237815604673698
+        },
+        "route:11": {
+          "rows": 1488,
+          "actual_sum": 1667277,
+          "absolute_error_sum": 256884,
+          "pred_minus_actual": 169546,
+          "missing_label_rows": 214,
+          "wape": 0.15407397810921641,
+          "wape_score": 0.8459260218907836
+        },
+        "route:12": {
+          "rows": 1488,
+          "actual_sum": 1741516,
+          "absolute_error_sum": 268162,
+          "pred_minus_actual": 179314,
+          "missing_label_rows": 137,
+          "wape": 0.15398193298252785,
+          "wape_score": 0.8460180670174722
+        },
+        "route:17": {
+          "rows": 1488,
+          "actual_sum": 2695020,
+          "absolute_error_sum": 303466,
+          "pred_minus_actual": 159466,
+          "missing_label_rows": 124,
+          "wape": 0.11260250387752224,
+          "wape_score": 0.8873974961224778
+        },
+        "route:25": {
+          "rows": 1488,
+          "actual_sum": 338653,
+          "absolute_error_sum": 92562,
+          "pred_minus_actual": 67012,
+          "missing_label_rows": 280,
+          "wape": 0.273324021933956,
+          "wape_score": 0.726675978066044
+        },
+        "route:26": {
+          "rows": 1488,
+          "actual_sum": 802254,
+          "absolute_error_sum": 229935,
+          "pred_minus_actual": 219867,
+          "missing_label_rows": 135,
+          "wape": 0.2866112228795369,
+          "wape_score": 0.7133887771204631
+        },
+        "route:28": {
+          "rows": 1488,
+          "actual_sum": 464420,
+          "absolute_error_sum": 133104,
+          "pred_minus_actual": 120012,
+          "missing_label_rows": 246,
+          "wape": 0.286602644158305,
+          "wape_score": 0.7133973558416951
+        },
+        "route:50": {
+          "rows": 1488,
+          "actual_sum": 1222789,
+          "absolute_error_sum": 284024,
+          "pred_minus_actual": 24406,
+          "missing_label_rows": 168,
+          "wape": 0.23227556021521292,
+          "wape_score": 0.7677244397847871
+        },
+        "route:7": {
+          "rows": 1488,
+          "actual_sum": 874497,
+          "absolute_error_sum": 591143,
+          "pred_minus_actual": 586477,
+          "missing_label_rows": 134,
+          "wape": 0.6759805922719003,
+          "wape_score": 0.3240194077280997
+        },
+        "elapsed_seconds": 0.11
+      },
+      "median_zero": {
+        "all": {
+          "rows": 13392,
+          "actual_sum": 10717653,
+          "absolute_error_sum": 2794723,
+          "pred_minus_actual": 2347643,
+          "missing_label_rows": 1654,
+          "wape": 0.260758862038172,
+          "wape_score": 0.739241137961828
+        },
+        "hours:day_06_22": {
+          "rows": 9486,
+          "actual_sum": 10502721,
+          "absolute_error_sum": 2744771,
+          "pred_minus_actual": 2357059,
+          "missing_label_rows": 0,
+          "wape": 0.26133903775983386,
+          "wape_score": 0.7386609622401661
+        },
+        "hours:night_23_05": {
+          "rows": 3906,
+          "actual_sum": 214932,
+          "absolute_error_sum": 49952,
+          "pred_minus_actual": -9416,
+          "missing_label_rows": 1654,
+          "wape": 0.23240838963020863,
+          "wape_score": 0.7675916103697914
+        },
+        "hours:other": {
+          "rows": 11160,
+          "actual_sum": 7364475,
+          "absolute_error_sum": 1861714,
+          "pred_minus_actual": 1465828,
+          "missing_label_rows": 1654,
+          "wape": 0.2527965673045261,
+          "wape_score": 0.747203432695474
+        },
+        "hours:train_peaks": {
+          "rows": 2232,
+          "actual_sum": 3353178,
+          "absolute_error_sum": 933009,
+          "pred_minus_actual": 881815,
+          "missing_label_rows": 0,
+          "wape": 0.2782461891375883,
+          "wape_score": 0.7217538108624117
+        },
+        "labels:missing_assumed_zero": {
+          "rows": 1654,
+          "actual_sum": 0,
+          "absolute_error_sum": 577,
+          "pred_minus_actual": 577,
+          "missing_label_rows": 1654,
+          "wape": null,
+          "wape_score": null
+        },
+        "labels:observed": {
+          "rows": 11738,
+          "actual_sum": 10717653,
+          "absolute_error_sum": 2794146,
+          "pred_minus_actual": 2347066,
+          "missing_label_rows": 0,
+          "wape": 0.2607050256245467,
+          "wape_score": 0.7392949743754533
+        },
+        "month:2025-07": {
+          "rows": 6696,
+          "actual_sum": 5407676,
+          "absolute_error_sum": 1484089,
+          "pred_minus_actual": 1213119,
+          "missing_label_rows": 818,
+          "wape": 0.27444118323656963,
+          "wape_score": 0.7255588167634304
+        },
+        "month:2025-08": {
+          "rows": 6696,
+          "actual_sum": 5309977,
+          "absolute_error_sum": 1310634,
+          "pred_minus_actual": 1134524,
+          "missing_label_rows": 836,
+          "wape": 0.24682479792285353,
+          "wape_score": 0.7531752020771465
+        },
+        "route:1": {
+          "rows": 1488,
+          "actual_sum": 911227,
+          "absolute_error_sum": 219681,
+          "pred_minus_actual": 211947,
+          "missing_label_rows": 216,
+          "wape": 0.24108262814863915,
+          "wape_score": 0.7589173718513609
+        },
+        "route:11": {
+          "rows": 1488,
+          "actual_sum": 1667277,
+          "absolute_error_sum": 318469,
+          "pred_minus_actual": 260041,
+          "missing_label_rows": 214,
+          "wape": 0.19101145160642172,
+          "wape_score": 0.8089885483935783
+        },
+        "route:12": {
+          "rows": 1488,
+          "actual_sum": 1741516,
+          "absolute_error_sum": 360332,
+          "pred_minus_actual": 306038,
+          "missing_label_rows": 137,
+          "wape": 0.20690708555075005,
+          "wape_score": 0.79309291444925
+        },
+        "route:17": {
+          "rows": 1488,
+          "actual_sum": 2695020,
+          "absolute_error_sum": 438162,
+          "pred_minus_actual": 356542,
+          "missing_label_rows": 124,
+          "wape": 0.16258209586570785,
+          "wape_score": 0.8374179041342922
+        },
+        "route:25": {
+          "rows": 1488,
+          "actual_sum": 338653,
+          "absolute_error_sum": 100061,
+          "pred_minus_actual": 73687,
+          "missing_label_rows": 280,
+          "wape": 0.2954676320599552,
+          "wape_score": 0.7045323679400448
+        },
+        "route:26": {
+          "rows": 1488,
+          "actual_sum": 802254,
+          "absolute_error_sum": 264708,
+          "pred_minus_actual": 255334,
+          "missing_label_rows": 135,
+          "wape": 0.32995535079912347,
+          "wape_score": 0.6700446492008765
+        },
+        "route:28": {
+          "rows": 1488,
+          "actual_sum": 464420,
+          "absolute_error_sum": 150186,
+          "pred_minus_actual": 139822,
+          "missing_label_rows": 246,
+          "wape": 0.3233840058567676,
+          "wape_score": 0.6766159941432324
+        },
+        "route:50": {
+          "rows": 1488,
+          "actual_sum": 1222789,
+          "absolute_error_sum": 310069,
+          "pred_minus_actual": 115467,
+          "missing_label_rows": 168,
+          "wape": 0.2535752284327059,
+          "wape_score": 0.746424771567294
+        },
+        "route:7": {
+          "rows": 1488,
+          "actual_sum": 874497,
+          "absolute_error_sum": 633055,
+          "pred_minus_actual": 628765,
+          "missing_label_rows": 134,
+          "wape": 0.7239075720099669,
+          "wape_score": 0.2760924279900331
+        },
+        "elapsed_seconds": 0.092
+      },
+      "mean_observed": {
+        "all": {
+          "rows": 13392,
+          "actual_sum": 10717653,
+          "absolute_error_sum": 2385411,
+          "pred_minus_actual": 1733673,
+          "missing_label_rows": 1654,
+          "wape": 0.22256841119972814,
+          "wape_score": 0.7774315888002719
+        },
+        "hours:day_06_22": {
+          "rows": 9486,
+          "actual_sum": 10502721,
+          "absolute_error_sum": 2269819,
+          "pred_minus_actual": 1676197,
+          "missing_label_rows": 0,
+          "wape": 0.21611723285803747,
+          "wape_score": 0.7838827671419626
+        },
+        "hours:night_23_05": {
+          "rows": 3906,
+          "actual_sum": 214932,
+          "absolute_error_sum": 115592,
+          "pred_minus_actual": 57476,
+          "missing_label_rows": 1654,
+          "wape": 0.5378073064969385,
+          "wape_score": 0.46219269350306147
+        },
+        "hours:other": {
+          "rows": 11160,
+          "actual_sum": 7364475,
+          "absolute_error_sum": 1670677,
+          "pred_minus_actual": 1138799,
+          "missing_label_rows": 1654,
+          "wape": 0.22685622532495528,
+          "wape_score": 0.7731437746750447
+        },
+        "hours:train_peaks": {
+          "rows": 2232,
+          "actual_sum": 3353178,
+          "absolute_error_sum": 714734,
+          "pred_minus_actual": 594874,
+          "missing_label_rows": 0,
+          "wape": 0.21315122549414317,
+          "wape_score": 0.7868487745058568
+        },
+        "labels:missing_assumed_zero": {
+          "rows": 1654,
+          "actual_sum": 0,
+          "absolute_error_sum": 66681,
+          "pred_minus_actual": 66681,
+          "missing_label_rows": 1654,
+          "wape": null,
+          "wape_score": null
+        },
+        "labels:observed": {
+          "rows": 11738,
+          "actual_sum": 10717653,
+          "absolute_error_sum": 2318730,
+          "pred_minus_actual": 1666992,
+          "missing_label_rows": 0,
+          "wape": 0.2163468065256451,
+          "wape_score": 0.7836531934743549
+        },
+        "month:2025-07": {
+          "rows": 6696,
+          "actual_sum": 5407676,
+          "absolute_error_sum": 1283412,
+          "pred_minus_actual": 902842,
+          "missing_label_rows": 818,
+          "wape": 0.23733152651897044,
+          "wape_score": 0.7626684734810296
+        },
+        "month:2025-08": {
+          "rows": 6696,
+          "actual_sum": 5309977,
+          "absolute_error_sum": 1101999,
+          "pred_minus_actual": 830831,
+          "missing_label_rows": 836,
+          "wape": 0.2075336672833046,
+          "wape_score": 0.7924663327166954
+        },
+        "route:1": {
+          "rows": 1488,
+          "actual_sum": 911227,
+          "absolute_error_sum": 165300,
+          "pred_minus_actual": 145380,
+          "missing_label_rows": 216,
+          "wape": 0.1814037555954773,
+          "wape_score": 0.8185962444045227
+        },
+        "route:11": {
+          "rows": 1488,
+          "actual_sum": 1667277,
+          "absolute_error_sum": 260264,
+          "pred_minus_actual": 173046,
+          "missing_label_rows": 214,
+          "wape": 0.1561012357274766,
+          "wape_score": 0.8438987642725234
+        },
+        "route:12": {
+          "rows": 1488,
+          "actual_sum": 1741516,
+          "absolute_error_sum": 268765,
+          "pred_minus_actual": 179997,
+          "missing_label_rows": 137,
+          "wape": 0.1543281830313359,
+          "wape_score": 0.8456718169686641
+        },
+        "route:17": {
+          "rows": 1488,
+          "actual_sum": 2695020,
+          "absolute_error_sum": 306856,
+          "pred_minus_actual": 163314,
+          "missing_label_rows": 124,
+          "wape": 0.11386037951480879,
+          "wape_score": 0.8861396204851912
+        },
+        "route:25": {
+          "rows": 1488,
+          "actual_sum": 338653,
+          "absolute_error_sum": 134855,
+          "pred_minus_actual": 109487,
+          "missing_label_rows": 280,
+          "wape": 0.3982099671345005,
+          "wape_score": 0.6017900328654995
+        },
+        "route:26": {
+          "rows": 1488,
+          "actual_sum": 802254,
+          "absolute_error_sum": 232724,
+          "pred_minus_actual": 222808,
+          "missing_label_rows": 135,
+          "wape": 0.29008767796732704,
+          "wape_score": 0.709912322032673
+        },
+        "route:28": {
+          "rows": 1488,
+          "actual_sum": 464420,
+          "absolute_error_sum": 136961,
+          "pred_minus_actual": 124081,
+          "missing_label_rows": 246,
+          "wape": 0.2949076267171956,
+          "wape_score": 0.7050923732828044
+        },
+        "route:50": {
+          "rows": 1488,
+          "actual_sum": 1222789,
+          "absolute_error_sum": 285537,
+          "pred_minus_actual": 25947,
+          "missing_label_rows": 168,
+          "wape": 0.23351289551999568,
+          "wape_score": 0.7664871044800043
+        },
+        "route:7": {
+          "rows": 1488,
+          "actual_sum": 874497,
+          "absolute_error_sum": 594149,
+          "pred_minus_actual": 589613,
+          "missing_label_rows": 134,
+          "wape": 0.6794179968599092,
+          "wape_score": 0.3205820031400908
+        },
+        "elapsed_seconds": 0.106
+      },
+      "median_observed": {
+        "all": {
+          "rows": 13392,
+          "actual_sum": 10717653,
+          "absolute_error_sum": 2857807,
+          "pred_minus_actual": 2411771,
+          "missing_label_rows": 1654,
+          "wape": 0.2666448521891873,
+          "wape_score": 0.7333551478108127
+        },
+        "hours:day_06_22": {
+          "rows": 9486,
+          "actual_sum": 10502721,
+          "absolute_error_sum": 2744771,
+          "pred_minus_actual": 2357059,
+          "missing_label_rows": 0,
+          "wape": 0.26133903775983386,
+          "wape_score": 0.7386609622401661
+        },
+        "hours:night_23_05": {
+          "rows": 3906,
+          "actual_sum": 214932,
+          "absolute_error_sum": 113036,
+          "pred_minus_actual": 54712,
+          "missing_label_rows": 1654,
+          "wape": 0.5259151731710494,
+          "wape_score": 0.4740848268289506
+        },
+        "hours:other": {
+          "rows": 11160,
+          "actual_sum": 7364475,
+          "absolute_error_sum": 1924798,
+          "pred_minus_actual": 1529956,
+          "missing_label_rows": 1654,
+          "wape": 0.2613625546967028,
+          "wape_score": 0.7386374453032972
+        },
+        "hours:train_peaks": {
+          "rows": 2232,
+          "actual_sum": 3353178,
+          "absolute_error_sum": 933009,
+          "pred_minus_actual": 881815,
+          "missing_label_rows": 0,
+          "wape": 0.2782461891375883,
+          "wape_score": 0.7217538108624117
+        },
+        "labels:missing_assumed_zero": {
+          "rows": 1654,
+          "actual_sum": 0,
+          "absolute_error_sum": 63545,
+          "pred_minus_actual": 63545,
+          "missing_label_rows": 1654,
+          "wape": null,
+          "wape_score": null
+        },
+        "labels:observed": {
+          "rows": 11738,
+          "actual_sum": 10717653,
+          "absolute_error_sum": 2794262,
+          "pred_minus_actual": 2348226,
+          "missing_label_rows": 0,
+          "wape": 0.26071584888967764,
+          "wape_score": 0.7392841511103223
+        },
+        "month:2025-07": {
+          "rows": 6696,
+          "actual_sum": 5407676,
+          "absolute_error_sum": 1515572,
+          "pred_minus_actual": 1245142,
+          "missing_label_rows": 818,
+          "wape": 0.2802630926852866,
+          "wape_score": 0.7197369073147134
+        },
+        "month:2025-08": {
+          "rows": 6696,
+          "actual_sum": 5309977,
+          "absolute_error_sum": 1342235,
+          "pred_minus_actual": 1166629,
+          "missing_label_rows": 836,
+          "wape": 0.2527760478058568,
+          "wape_score": 0.7472239521941433
+        },
+        "route:1": {
+          "rows": 1488,
+          "actual_sum": 911227,
+          "absolute_error_sum": 224285,
+          "pred_minus_actual": 216665,
+          "missing_label_rows": 216,
+          "wape": 0.24613515622342183,
+          "wape_score": 0.7538648437765781
+        },
+        "route:11": {
+          "rows": 1488,
+          "actual_sum": 1667277,
+          "absolute_error_sum": 321156,
+          "pred_minus_actual": 262770,
+          "missing_label_rows": 214,
+          "wape": 0.19262306143490254,
+          "wape_score": 0.8073769385650975
+        },
+        "route:12": {
+          "rows": 1488,
+          "actual_sum": 1741516,
+          "absolute_error_sum": 360957,
+          "pred_minus_actual": 306685,
+          "missing_label_rows": 137,
+          "wape": 0.20726596827132224,
+          "wape_score": 0.7927340317286777
+        },
+        "route:17": {
+          "rows": 1488,
+          "actual_sum": 2695020,
+          "absolute_error_sum": 441557,
+          "pred_minus_actual": 360053,
+          "missing_label_rows": 124,
+          "wape": 0.1638418267767957,
+          "wape_score": 0.8361581732232043
+        },
+        "route:25": {
+          "rows": 1488,
+          "actual_sum": 338653,
+          "absolute_error_sum": 142063,
+          "pred_minus_actual": 115973,
+          "missing_label_rows": 280,
+          "wape": 0.4194942906160583,
+          "wape_score": 0.5805057093839416
+        },
+        "route:26": {
+          "rows": 1488,
+          "actual_sum": 802254,
+          "absolute_error_sum": 266356,
+          "pred_minus_actual": 257156,
+          "missing_label_rows": 135,
+          "wape": 0.3320095630560895,
+          "wape_score": 0.6679904369439105
+        },
+        "route:28": {
+          "rows": 1488,
+          "actual_sum": 464420,
+          "absolute_error_sum": 154422,
+          "pred_minus_actual": 144252,
+          "missing_label_rows": 246,
+          "wape": 0.3325050600749322,
+          "wape_score": 0.6674949399250678
+        },
+        "route:50": {
+          "rows": 1488,
+          "actual_sum": 1222789,
+          "absolute_error_sum": 311102,
+          "pred_minus_actual": 116510,
+          "missing_label_rows": 168,
+          "wape": 0.2544200184986944,
+          "wape_score": 0.7455799815013056
+        },
+        "route:7": {
+          "rows": 1488,
+          "actual_sum": 874497,
+          "absolute_error_sum": 635909,
+          "pred_minus_actual": 631707,
+          "missing_label_rows": 134,
+          "wape": 0.7271711623939248,
+          "wape_score": 0.27282883760607524
+        },
+        "elapsed_seconds": 0.088
+      },
+      "mean_56d": {
+        "all": {
+          "rows": 13392,
+          "actual_sum": 10717653,
+          "absolute_error_sum": 2073058,
+          "pred_minus_actual": 1297264,
+          "missing_label_rows": 1654,
+          "wape": 0.1934246238425521,
+          "wape_score": 0.8065753761574479
+        },
+        "hours:day_06_22": {
+          "rows": 9486,
+          "actual_sum": 10502721,
+          "absolute_error_sum": 2022340,
+          "pred_minus_actual": 1287674,
+          "missing_label_rows": 0,
+          "wape": 0.19255391055327473,
+          "wape_score": 0.8074460894467252
+        },
+        "hours:night_23_05": {
+          "rows": 3906,
+          "actual_sum": 214932,
+          "absolute_error_sum": 50718,
+          "pred_minus_actual": 9590,
+          "missing_label_rows": 1654,
+          "wape": 0.23597230752051812,
+          "wape_score": 0.7640276924794819
+        },
+        "hours:other": {
+          "rows": 11160,
+          "actual_sum": 7364475,
+          "absolute_error_sum": 1465566,
+          "pred_minus_actual": 905258,
+          "missing_label_rows": 1654,
+          "wape": 0.19900481704398482,
+          "wape_score": 0.8009951829560151
+        },
+        "hours:train_peaks": {
+          "rows": 2232,
+          "actual_sum": 3353178,
+          "absolute_error_sum": 607492,
+          "pred_minus_actual": 392006,
+          "missing_label_rows": 0,
+          "wape": 0.18116902830687784,
+          "wape_score": 0.8188309716931221
+        },
+        "labels:missing_assumed_zero": {
+          "rows": 1654,
+          "actual_sum": 0,
+          "absolute_error_sum": 1095,
+          "pred_minus_actual": 1095,
+          "missing_label_rows": 1654,
+          "wape": null,
+          "wape_score": null
+        },
+        "labels:observed": {
+          "rows": 11738,
+          "actual_sum": 10717653,
+          "absolute_error_sum": 2071963,
+          "pred_minus_actual": 1296169,
+          "missing_label_rows": 0,
+          "wape": 0.19332245595187678,
+          "wape_score": 0.8066775440481232
+        },
+        "month:2025-07": {
+          "rows": 6696,
+          "actual_sum": 5407676,
+          "absolute_error_sum": 1132442,
+          "pred_minus_actual": 693172,
+          "missing_label_rows": 818,
+          "wape": 0.20941380363764397,
+          "wape_score": 0.790586196362356
+        },
+        "month:2025-08": {
+          "rows": 6696,
+          "actual_sum": 5309977,
+          "absolute_error_sum": 940616,
+          "pred_minus_actual": 604092,
+          "missing_label_rows": 836,
+          "wape": 0.17714125692069851,
+          "wape_score": 0.8228587430793015
+        },
+        "route:1": {
+          "rows": 1488,
+          "actual_sum": 911227,
+          "absolute_error_sum": 141162,
+          "pred_minus_actual": 106206,
+          "missing_label_rows": 216,
+          "wape": 0.15491419810870397,
+          "wape_score": 0.845085801891296
+        },
+        "route:11": {
+          "rows": 1488,
+          "actual_sum": 1667277,
+          "absolute_error_sum": 226924,
+          "pred_minus_actual": 127588,
+          "missing_label_rows": 214,
+          "wape": 0.13610455851067338,
+          "wape_score": 0.8638954414893266
+        },
+        "route:12": {
+          "rows": 1488,
+          "actual_sum": 1741516,
+          "absolute_error_sum": 219287,
+          "pred_minus_actual": 128839,
+          "missing_label_rows": 137,
+          "wape": 0.12591730423378253,
+          "wape_score": 0.8740826957662174
+        },
+        "route:17": {
+          "rows": 1488,
+          "actual_sum": 2695020,
+          "absolute_error_sum": 306089,
+          "pred_minus_actual": 161975,
+          "missing_label_rows": 124,
+          "wape": 0.1135757805136882,
+          "wape_score": 0.8864242194863118
+        },
+        "route:25": {
+          "rows": 1488,
+          "actual_sum": 338653,
+          "absolute_error_sum": 90022,
+          "pred_minus_actual": 66748,
+          "missing_label_rows": 280,
+          "wape": 0.2658237192642616,
+          "wape_score": 0.7341762807357384
+        },
+        "route:26": {
+          "rows": 1488,
+          "actual_sum": 802254,
+          "absolute_error_sum": 154442,
+          "pred_minus_actual": 135248,
+          "missing_label_rows": 135,
+          "wape": 0.19251010278540212,
+          "wape_score": 0.8074898972145979
+        },
+        "route:28": {
+          "rows": 1488,
+          "actual_sum": 464420,
+          "absolute_error_sum": 113568,
+          "pred_minus_actual": 93948,
+          "missing_label_rows": 246,
+          "wape": 0.24453727229662806,
+          "wape_score": 0.755462727703372
+        },
+        "route:50": {
+          "rows": 1488,
+          "actual_sum": 1222789,
+          "absolute_error_sum": 281964,
+          "pred_minus_actual": -55974,
+          "missing_label_rows": 168,
+          "wape": 0.23059088689872087,
+          "wape_score": 0.7694091131012791
+        },
+        "route:7": {
+          "rows": 1488,
+          "actual_sum": 874497,
+          "absolute_error_sum": 539600,
+          "pred_minus_actual": 532686,
+          "missing_label_rows": 134,
+          "wape": 0.6170404243811014,
+          "wape_score": 0.3829595756188986
+        },
+        "elapsed_seconds": 0.092
+      },
+      "hgb_direct": {
+        "all": {
+          "rows": 13392,
+          "actual_sum": 10717653,
+          "absolute_error_sum": 1852720,
+          "pred_minus_actual": 532438,
+          "missing_label_rows": 1654,
+          "wape": 0.17286620494244404,
+          "wape_score": 0.8271337950575559
+        },
+        "hours:day_06_22": {
+          "rows": 9486,
+          "actual_sum": 10502721,
+          "absolute_error_sum": 1791387,
+          "pred_minus_actual": 548413,
+          "missing_label_rows": 0,
+          "wape": 0.1705640852499081,
+          "wape_score": 0.8294359147500919
+        },
+        "hours:night_23_05": {
+          "rows": 3906,
+          "actual_sum": 214932,
+          "absolute_error_sum": 61333,
+          "pred_minus_actual": -15975,
+          "missing_label_rows": 1654,
+          "wape": 0.28536002084380174,
+          "wape_score": 0.7146399791561983
+        },
+        "hours:other": {
+          "rows": 11160,
+          "actual_sum": 7364475,
+          "absolute_error_sum": 1330348,
+          "pred_minus_actual": 326750,
+          "missing_label_rows": 1654,
+          "wape": 0.1806439698688637,
+          "wape_score": 0.8193560301311363
+        },
+        "hours:train_peaks": {
+          "rows": 2232,
+          "actual_sum": 3353178,
+          "absolute_error_sum": 522372,
+          "pred_minus_actual": 205688,
+          "missing_label_rows": 0,
+          "wape": 0.15578415461392148,
+          "wape_score": 0.8442158453860785
+        },
+        "labels:missing_assumed_zero": {
+          "rows": 1654,
+          "actual_sum": 0,
+          "absolute_error_sum": 2165,
+          "pred_minus_actual": 2165,
+          "missing_label_rows": 1654,
+          "wape": null,
+          "wape_score": null
+        },
+        "labels:observed": {
+          "rows": 11738,
+          "actual_sum": 10717653,
+          "absolute_error_sum": 1850555,
+          "pred_minus_actual": 530273,
+          "missing_label_rows": 0,
+          "wape": 0.17266420176133712,
+          "wape_score": 0.8273357982386629
+        },
+        "month:2025-07": {
+          "rows": 6696,
+          "actual_sum": 5407676,
+          "absolute_error_sum": 1012710,
+          "pred_minus_actual": 313010,
+          "missing_label_rows": 818,
+          "wape": 0.18727268423625973,
+          "wape_score": 0.8127273157637402
+        },
+        "month:2025-08": {
+          "rows": 6696,
+          "actual_sum": 5309977,
+          "absolute_error_sum": 840010,
+          "pred_minus_actual": 219428,
+          "missing_label_rows": 836,
+          "wape": 0.15819465884692155,
+          "wape_score": 0.8418053411530785
+        },
+        "route:1": {
+          "rows": 1488,
+          "actual_sum": 911227,
+          "absolute_error_sum": 108968,
+          "pred_minus_actual": -4202,
+          "missing_label_rows": 216,
+          "wape": 0.11958381391244992,
+          "wape_score": 0.8804161860875501
+        },
+        "route:11": {
+          "rows": 1488,
+          "actual_sum": 1667277,
+          "absolute_error_sum": 224479,
+          "pred_minus_actual": 28899,
+          "missing_label_rows": 214,
+          "wape": 0.13463809552941713,
+          "wape_score": 0.8653619044705829
+        },
+        "route:12": {
+          "rows": 1488,
+          "actual_sum": 1741516,
+          "absolute_error_sum": 214772,
+          "pred_minus_actual": 44518,
+          "missing_label_rows": 137,
+          "wape": 0.12332473546036901,
+          "wape_score": 0.876675264539631
+        },
+        "route:17": {
+          "rows": 1488,
+          "actual_sum": 2695020,
+          "absolute_error_sum": 285349,
+          "pred_minus_actual": 84275,
+          "missing_label_rows": 124,
+          "wape": 0.10588010478586429,
+          "wape_score": 0.8941198952141357
+        },
+        "route:25": {
+          "rows": 1488,
+          "actual_sum": 338653,
+          "absolute_error_sum": 68296,
+          "pred_minus_actual": -2096,
+          "missing_label_rows": 280,
+          "wape": 0.2016695555627737,
+          "wape_score": 0.7983304444372263
+        },
+        "route:26": {
+          "rows": 1488,
+          "actual_sum": 802254,
+          "absolute_error_sum": 127782,
+          "pred_minus_actual": 69808,
+          "missing_label_rows": 135,
+          "wape": 0.1592787321721051,
+          "wape_score": 0.8407212678278949
+        },
+        "route:28": {
+          "rows": 1488,
+          "actual_sum": 464420,
+          "absolute_error_sum": 79151,
+          "pred_minus_actual": 13649,
+          "missing_label_rows": 246,
+          "wape": 0.17042978338572842,
+          "wape_score": 0.8295702166142715
+        },
+        "route:50": {
+          "rows": 1488,
+          "actual_sum": 1222789,
+          "absolute_error_sum": 300339,
+          "pred_minus_actual": -123493,
+          "missing_label_rows": 168,
+          "wape": 0.2456180093213138,
+          "wape_score": 0.7543819906786862
+        },
+        "route:7": {
+          "rows": 1488,
+          "actual_sum": 874497,
+          "absolute_error_sum": 443584,
+          "pred_minus_actual": 421080,
+          "missing_label_rows": 134,
+          "wape": 0.5072447361168764,
+          "wape_score": 0.49275526388312363
+        },
+        "elapsed_seconds": 0.656
+      },
+      "hgb_recursive": {
+        "all": {
+          "rows": 13392,
+          "actual_sum": 10717653,
+          "absolute_error_sum": 1964144,
+          "pred_minus_actual": -297530,
+          "missing_label_rows": 1654,
+          "wape": 0.18326251092473325,
+          "wape_score": 0.8167374890752668
+        },
+        "hours:day_06_22": {
+          "rows": 9486,
+          "actual_sum": 10502721,
+          "absolute_error_sum": 1863363,
+          "pred_minus_actual": -208607,
+          "missing_label_rows": 0,
+          "wape": 0.17741716646571873,
+          "wape_score": 0.8225828335342813
+        },
+        "hours:night_23_05": {
+          "rows": 3906,
+          "actual_sum": 214932,
+          "absolute_error_sum": 100781,
+          "pred_minus_actual": -88923,
+          "missing_label_rows": 1654,
+          "wape": 0.4688971395604191,
+          "wape_score": 0.5311028604395809
+        },
+        "hours:other": {
+          "rows": 11160,
+          "actual_sum": 7364475,
+          "absolute_error_sum": 1428275,
+          "pred_minus_actual": -236949,
+          "missing_label_rows": 1654,
+          "wape": 0.19394118385899878,
+          "wape_score": 0.8060588161410012
+        },
+        "hours:train_peaks": {
+          "rows": 2232,
+          "actual_sum": 3353178,
+          "absolute_error_sum": 535869,
+          "pred_minus_actual": -60581,
+          "missing_label_rows": 0,
+          "wape": 0.15980929136478886,
+          "wape_score": 0.8401907086352112
+        },
+        "labels:missing_assumed_zero": {
+          "rows": 1654,
+          "actual_sum": 0,
+          "absolute_error_sum": 725,
+          "pred_minus_actual": 725,
+          "missing_label_rows": 1654,
+          "wape": null,
+          "wape_score": null
+        },
+        "labels:observed": {
+          "rows": 11738,
+          "actual_sum": 10717653,
+          "absolute_error_sum": 1963419,
+          "pred_minus_actual": -298255,
+          "missing_label_rows": 0,
+          "wape": 0.18319486551766512,
+          "wape_score": 0.8168051344823348
+        },
+        "month:2025-07": {
+          "rows": 6696,
+          "actual_sum": 5407676,
+          "absolute_error_sum": 946773,
+          "pred_minus_actual": 38847,
+          "missing_label_rows": 818,
+          "wape": 0.17507946112156128,
+          "wape_score": 0.8249205388784387
+        },
+        "month:2025-08": {
+          "rows": 6696,
+          "actual_sum": 5309977,
+          "absolute_error_sum": 1017371,
+          "pred_minus_actual": -336377,
+          "missing_label_rows": 836,
+          "wape": 0.19159612179111132,
+          "wape_score": 0.8084038782088887
+        },
+        "route:1": {
+          "rows": 1488,
+          "actual_sum": 911227,
+          "absolute_error_sum": 126053,
+          "pred_minus_actual": -1569,
+          "missing_label_rows": 216,
+          "wape": 0.13833325834287175,
+          "wape_score": 0.8616667416571282
+        },
+        "route:11": {
+          "rows": 1488,
+          "actual_sum": 1667277,
+          "absolute_error_sum": 211882,
+          "pred_minus_actual": -20416,
+          "missing_label_rows": 214,
+          "wape": 0.1270826623290551,
+          "wape_score": 0.8729173376709449
+        },
+        "route:12": {
+          "rows": 1488,
+          "actual_sum": 1741516,
+          "absolute_error_sum": 211881,
+          "pred_minus_actual": -94785,
+          "missing_label_rows": 137,
+          "wape": 0.12166468754809029,
+          "wape_score": 0.8783353124519098
+        },
+        "route:17": {
+          "rows": 1488,
+          "actual_sum": 2695020,
+          "absolute_error_sum": 407923,
+          "pred_minus_actual": -251203,
+          "missing_label_rows": 124,
+          "wape": 0.15136177097015976,
+          "wape_score": 0.8486382290298402
+        },
+        "route:25": {
+          "rows": 1488,
+          "actual_sum": 338653,
+          "absolute_error_sum": 100062,
+          "pred_minus_actual": -75004,
+          "missing_label_rows": 280,
+          "wape": 0.295470584935022,
+          "wape_score": 0.704529415064978
+        },
+        "route:26": {
+          "rows": 1488,
+          "actual_sum": 802254,
+          "absolute_error_sum": 112158,
+          "pred_minus_actual": -14560,
+          "missing_label_rows": 135,
+          "wape": 0.13980360334756822,
+          "wape_score": 0.8601963966524317
+        },
+        "route:28": {
+          "rows": 1488,
+          "actual_sum": 464420,
+          "absolute_error_sum": 95835,
+          "pred_minus_actual": 28539,
+          "missing_label_rows": 246,
+          "wape": 0.20635416218078464,
+          "wape_score": 0.7936458378192154
+        },
+        "route:50": {
+          "rows": 1488,
+          "actual_sum": 1222789,
+          "absolute_error_sum": 303593,
+          "pred_minus_actual": -155827,
+          "missing_label_rows": 168,
+          "wape": 0.2482791389193066,
+          "wape_score": 0.7517208610806934
+        },
+        "route:7": {
+          "rows": 1488,
+          "actual_sum": 874497,
+          "absolute_error_sum": 394757,
+          "pred_minus_actual": 287295,
+          "missing_label_rows": 134,
+          "wape": 0.45141035360898896,
+          "wape_score": 0.548589646391011
+        },
+        "elapsed_seconds": 0.923
+      }
+    },
+    "sep_oct": {
+      "hgb_direct": {
+        "all": {
+          "rows": 13176,
+          "actual_sum": 12754481,
+          "absolute_error_sum": 2246520,
+          "pred_minus_actual": -1189098,
+          "missing_label_rows": 1859,
+          "wape": 0.17613574397892004,
+          "wape_score": 0.8238642560210799
+        },
+        "hours:day_06_22": {
+          "rows": 9333,
+          "actual_sum": 12564562,
+          "absolute_error_sum": 2189848,
+          "pred_minus_actual": -1224802,
+          "missing_label_rows": 125,
+          "wape": 0.17428765125278542,
+          "wape_score": 0.8257123487472146
+        },
+        "hours:night_23_05": {
+          "rows": 3843,
+          "actual_sum": 189919,
+          "absolute_error_sum": 56672,
+          "pred_minus_actual": 35704,
+          "missing_label_rows": 1734,
+          "wape": 0.2984008972246063,
+          "wape_score": 0.7015991027753937
+        },
+        "hours:other": {
+          "rows": 10980,
+          "actual_sum": 8571938,
+          "absolute_error_sum": 1492523,
+          "pred_minus_actual": -595215,
+          "missing_label_rows": 1831,
+          "wape": 0.17411733495972556,
+          "wape_score": 0.8258826650402744
+        },
+        "hours:train_peaks": {
+          "rows": 2196,
+          "actual_sum": 4182543,
+          "absolute_error_sum": 753997,
+          "pred_minus_actual": -593883,
+          "missing_label_rows": 28,
+          "wape": 0.18027238452778607,
+          "wape_score": 0.819727615472214
+        },
+        "labels:missing_assumed_zero": {
+          "rows": 1859,
+          "actual_sum": 0,
+          "absolute_error_sum": 71050,
+          "pred_minus_actual": 71050,
+          "missing_label_rows": 1859,
+          "wape": null,
+          "wape_score": null
+        },
+        "labels:observed": {
+          "rows": 11317,
+          "actual_sum": 12754481,
+          "absolute_error_sum": 2175470,
+          "pred_minus_actual": -1260148,
+          "missing_label_rows": 0,
+          "wape": 0.17056515274906128,
+          "wape_score": 0.8294348472509387
+        },
+        "month:2025-09": {
+          "rows": 6480,
+          "actual_sum": 6147694,
+          "absolute_error_sum": 1015004,
+          "pred_minus_actual": -469524,
+          "missing_label_rows": 944,
+          "wape": 0.16510320780442228,
+          "wape_score": 0.8348967921955777
+        },
+        "month:2025-10": {
+          "rows": 6696,
+          "actual_sum": 6606787,
+          "absolute_error_sum": 1231516,
+          "pred_minus_actual": -719574,
+          "missing_label_rows": 915,
+          "wape": 0.18640165030293848,
+          "wape_score": 0.8135983496970616
+        },
+        "route:1": {
+          "rows": 1464,
+          "actual_sum": 1136093,
+          "absolute_error_sum": 201122,
+          "pred_minus_actual": -150050,
+          "missing_label_rows": 224,
+          "wape": 0.1770295213508049,
+          "wape_score": 0.8229704786491951
+        },
+        "route:11": {
+          "rows": 1464,
+          "actual_sum": 1907061,
+          "absolute_error_sum": 277569,
+          "pred_minus_actual": -149079,
+          "missing_label_rows": 210,
+          "wape": 0.14554804487113943,
+          "wape_score": 0.8544519551288605
+        },
+        "route:12": {
+          "rows": 1464,
+          "actual_sum": 1983604,
+          "absolute_error_sum": 246122,
+          "pred_minus_actual": -140868,
+          "missing_label_rows": 144,
+          "wape": 0.12407819302643068,
+          "wape_score": 0.8759218069735694
+        },
+        "route:17": {
+          "rows": 1464,
+          "actual_sum": 3063025,
+          "absolute_error_sum": 381876,
+          "pred_minus_actual": -230644,
+          "missing_label_rows": 121,
+          "wape": 0.12467283159621616,
+          "wape_score": 0.8753271684037839
+        },
+        "route:25": {
+          "rows": 1464,
+          "actual_sum": 464537,
+          "absolute_error_sum": 106542,
+          "pred_minus_actual": -64488,
+          "missing_label_rows": 283,
+          "wape": 0.2293509451346179,
+          "wape_score": 0.7706490548653822
+        },
+        "route:26": {
+          "rows": 1464,
+          "actual_sum": 1089964,
+          "absolute_error_sum": 219299,
+          "pred_minus_actual": -185593,
+          "missing_label_rows": 160,
+          "wape": 0.2011983882036471,
+          "wape_score": 0.7988016117963529
+        },
+        "route:28": {
+          "rows": 1464,
+          "actual_sum": 602164,
+          "absolute_error_sum": 125685,
+          "pred_minus_actual": -54107,
+          "missing_label_rows": 245,
+          "wape": 0.2087222085677656,
+          "wape_score": 0.7912777914322344
+        },
+        "route:50": {
+          "rows": 1464,
+          "actual_sum": 1157460,
+          "absolute_error_sum": 367157,
+          "pred_minus_actual": -37073,
+          "missing_label_rows": 331,
+          "wape": 0.31720923401240647,
+          "wape_score": 0.6827907659875936
+        },
+        "route:7": {
+          "rows": 1464,
+          "actual_sum": 1350573,
+          "absolute_error_sum": 321148,
+          "pred_minus_actual": -177196,
+          "missing_label_rows": 141,
+          "wape": 0.23778648025689836,
+          "wape_score": 0.7622135197431017
+        },
+        "elapsed_seconds": 0.885
+      },
+      "mean_zero": {
+        "all": {
+          "rows": 13176,
+          "actual_sum": 12754481,
+          "absolute_error_sum": 1946284,
+          "pred_minus_actual": -861398,
+          "missing_label_rows": 1859,
+          "wape": 0.15259609544284866,
+          "wape_score": 0.8474039045571513
+        },
+        "hours:day_06_22": {
+          "rows": 9333,
+          "actual_sum": 12564562,
+          "absolute_error_sum": 1909094,
+          "pred_minus_actual": -876622,
+          "missing_label_rows": 125,
+          "wape": 0.15194274181622885,
+          "wape_score": 0.8480572581837711
+        },
+        "hours:night_23_05": {
+          "rows": 3843,
+          "actual_sum": 189919,
+          "absolute_error_sum": 37190,
+          "pred_minus_actual": 15224,
+          "missing_label_rows": 1734,
+          "wape": 0.19582032340102887,
+          "wape_score": 0.8041796765989712
+        },
+        "hours:other": {
+          "rows": 10980,
+          "actual_sum": 8571938,
+          "absolute_error_sum": 1285687,
+          "pred_minus_actual": -468591,
+          "missing_label_rows": 1831,
+          "wape": 0.1499879023856682,
+          "wape_score": 0.8500120976143318
+        },
+        "hours:train_peaks": {
+          "rows": 2196,
+          "actual_sum": 4182543,
+          "absolute_error_sum": 660597,
+          "pred_minus_actual": -392807,
+          "missing_label_rows": 28,
+          "wape": 0.15794147244869927,
+          "wape_score": 0.8420585275513007
+        },
+        "labels:missing_assumed_zero": {
+          "rows": 1859,
+          "actual_sum": 0,
+          "absolute_error_sum": 88891,
+          "pred_minus_actual": 88891,
+          "missing_label_rows": 1859,
+          "wape": null,
+          "wape_score": null
+        },
+        "labels:observed": {
+          "rows": 11317,
+          "actual_sum": 12754481,
+          "absolute_error_sum": 1857393,
+          "pred_minus_actual": -950289,
+          "missing_label_rows": 0,
+          "wape": 0.14562670170585537,
+          "wape_score": 0.8543732982941447
+        },
+        "month:2025-09": {
+          "rows": 6480,
+          "actual_sum": 6147694,
+          "absolute_error_sum": 869509,
+          "pred_minus_actual": -303365,
+          "missing_label_rows": 944,
+          "wape": 0.14143661021514733,
+          "wape_score": 0.8585633897848527
+        },
+        "month:2025-10": {
+          "rows": 6696,
+          "actual_sum": 6606787,
+          "absolute_error_sum": 1076775,
+          "pred_minus_actual": -558033,
+          "missing_label_rows": 915,
+          "wape": 0.162980129373022,
+          "wape_score": 0.837019870626978
+        },
+        "route:1": {
+          "rows": 1464,
+          "actual_sum": 1136093,
+          "absolute_error_sum": 175315,
+          "pred_minus_actual": -122705,
+          "missing_label_rows": 224,
+          "wape": 0.15431395141066798,
+          "wape_score": 0.845686048589332
+        },
+        "route:11": {
+          "rows": 1464,
+          "actual_sum": 1907061,
+          "absolute_error_sum": 237245,
+          "pred_minus_actual": -126097,
+          "missing_label_rows": 210,
+          "wape": 0.12440346690535856,
+          "wape_score": 0.8755965330946415
+        },
+        "route:12": {
+          "rows": 1464,
+          "actual_sum": 1983604,
+          "absolute_error_sum": 215538,
+          "pred_minus_actual": -117096,
+          "missing_label_rows": 144,
+          "wape": 0.1086597929828736,
+          "wape_score": 0.8913402070171264
+        },
+        "route:17": {
+          "rows": 1464,
+          "actual_sum": 3063025,
+          "absolute_error_sum": 347596,
+          "pred_minus_actual": -270188,
+          "missing_label_rows": 121,
+          "wape": 0.11348128076003297,
+          "wape_score": 0.8865187192399671
+        },
+        "route:25": {
+          "rows": 1464,
+          "actual_sum": 464537,
+          "absolute_error_sum": 96704,
+          "pred_minus_actual": -79710,
+          "missing_label_rows": 283,
+          "wape": 0.20817286889957098,
+          "wape_score": 0.791827131100429
+        },
+        "route:26": {
+          "rows": 1464,
+          "actual_sum": 1089964,
+          "absolute_error_sum": 159442,
+          "pred_minus_actual": -129338,
+          "missing_label_rows": 160,
+          "wape": 0.14628189554884383,
+          "wape_score": 0.8537181044511561
+        },
+        "route:28": {
+          "rows": 1464,
+          "actual_sum": 602164,
+          "absolute_error_sum": 104760,
+          "pred_minus_actual": -51478,
+          "missing_label_rows": 245,
+          "wape": 0.17397253904251997,
+          "wape_score": 0.82602746095748
+        },
+        "route:50": {
+          "rows": 1464,
+          "actual_sum": 1157460,
+          "absolute_error_sum": 340656,
+          "pred_minus_actual": 81948,
+          "missing_label_rows": 331,
+          "wape": 0.29431341039863146,
+          "wape_score": 0.7056865896013685
+        },
+        "route:7": {
+          "rows": 1464,
+          "actual_sum": 1350573,
+          "absolute_error_sum": 269028,
+          "pred_minus_actual": -46734,
+          "missing_label_rows": 141,
+          "wape": 0.1991954525967867,
+          "wape_score": 0.8008045474032133
+        },
+        "elapsed_seconds": 0.165
+      },
+      "median_zero": {
+        "all": {
+          "rows": 13176,
+          "actual_sum": 12754481,
+          "absolute_error_sum": 1683697,
+          "pred_minus_actual": -358863,
+          "missing_label_rows": 1859,
+          "wape": 0.13200827222997158,
+          "wape_score": 0.8679917277700284
+        },
+        "hours:day_06_22": {
+          "rows": 9333,
+          "actual_sum": 12564562,
+          "absolute_error_sum": 1648659,
+          "pred_minus_actual": -371611,
+          "missing_label_rows": 125,
+          "wape": 0.13121499977476334,
+          "wape_score": 0.8687850002252366
+        },
+        "hours:night_23_05": {
+          "rows": 3843,
+          "actual_sum": 189919,
+          "absolute_error_sum": 35038,
+          "pred_minus_actual": 12748,
+          "missing_label_rows": 1734,
+          "wape": 0.18448917696491662,
+          "wape_score": 0.8155108230350834
+        },
+        "hours:other": {
+          "rows": 10980,
+          "actual_sum": 8571938,
+          "absolute_error_sum": 1150453,
+          "pred_minus_actual": -185839,
+          "missing_label_rows": 1831,
+          "wape": 0.13421154002747104,
+          "wape_score": 0.865788459972529
+        },
+        "hours:train_peaks": {
+          "rows": 2196,
+          "actual_sum": 4182543,
+          "absolute_error_sum": 533244,
+          "pred_minus_actual": -173024,
+          "missing_label_rows": 28,
+          "wape": 0.12749277174197612,
+          "wape_score": 0.8725072282580238
+        },
+        "labels:missing_assumed_zero": {
+          "rows": 1859,
+          "actual_sum": 0,
+          "absolute_error_sum": 88782,
+          "pred_minus_actual": 88782,
+          "missing_label_rows": 1859,
+          "wape": null,
+          "wape_score": null
+        },
+        "labels:observed": {
+          "rows": 11317,
+          "actual_sum": 12754481,
+          "absolute_error_sum": 1594915,
+          "pred_minus_actual": -447645,
+          "missing_label_rows": 0,
+          "wape": 0.12504742450908038,
+          "wape_score": 0.8749525754909196
+        },
+        "month:2025-09": {
+          "rows": 6480,
+          "actual_sum": 6147694,
+          "absolute_error_sum": 757746,
+          "pred_minus_actual": -60482,
+          "missing_label_rows": 944,
+          "wape": 0.12325694805239168,
+          "wape_score": 0.8767430519476083
+        },
+        "month:2025-10": {
+          "rows": 6696,
+          "actual_sum": 6606787,
+          "absolute_error_sum": 925951,
+          "pred_minus_actual": -298381,
+          "missing_label_rows": 915,
+          "wape": 0.14015148361828525,
+          "wape_score": 0.8598485163817148
+        },
+        "route:1": {
+          "rows": 1464,
+          "actual_sum": 1136093,
+          "absolute_error_sum": 146438,
+          "pred_minus_actual": -76604,
+          "missing_label_rows": 224,
+          "wape": 0.12889613790420326,
+          "wape_score": 0.8711038620957967
+        },
+        "route:11": {
+          "rows": 1464,
+          "actual_sum": 1907061,
+          "absolute_error_sum": 205759,
+          "pred_minus_actual": -65765,
+          "missing_label_rows": 210,
+          "wape": 0.10789324515576586,
+          "wape_score": 0.8921067548442342
+        },
+        "route:12": {
+          "rows": 1464,
+          "actual_sum": 1983604,
+          "absolute_error_sum": 178515,
+          "pred_minus_actual": -32407,
+          "missing_label_rows": 144,
+          "wape": 0.08999528131623045,
+          "wape_score": 0.9100047186837695
+        },
+        "route:17": {
+          "rows": 1464,
+          "actual_sum": 3063025,
+          "absolute_error_sum": 258201,
+          "pred_minus_actual": -126707,
+          "missing_label_rows": 121,
+          "wape": 0.0842960798556982,
+          "wape_score": 0.9157039201443018
+        },
+        "route:25": {
+          "rows": 1464,
+          "actual_sum": 464537,
+          "absolute_error_sum": 94423,
+          "pred_minus_actual": -78515,
+          "missing_label_rows": 283,
+          "wape": 0.20326260340941626,
+          "wape_score": 0.7967373965905837
+        },
+        "route:26": {
+          "rows": 1464,
+          "actual_sum": 1089964,
+          "absolute_error_sum": 145734,
+          "pred_minus_actual": -114004,
+          "missing_label_rows": 160,
+          "wape": 0.13370533338715773,
+          "wape_score": 0.8662946666128423
+        },
+        "route:28": {
+          "rows": 1464,
+          "actual_sum": 602164,
+          "absolute_error_sum": 98445,
+          "pred_minus_actual": -39933,
+          "missing_label_rows": 245,
+          "wape": 0.16348536279153186,
+          "wape_score": 0.8365146372084682
+        },
+        "route:50": {
+          "rows": 1464,
+          "actual_sum": 1157460,
+          "absolute_error_sum": 314796,
+          "pred_minus_actual": 144024,
+          "missing_label_rows": 331,
+          "wape": 0.2719713856202374,
+          "wape_score": 0.7280286143797625
+        },
+        "route:7": {
+          "rows": 1464,
+          "actual_sum": 1350573,
+          "absolute_error_sum": 241386,
+          "pred_minus_actual": 31048,
+          "missing_label_rows": 141,
+          "wape": 0.17872858408986408,
+          "wape_score": 0.821271415910136
+        },
+        "elapsed_seconds": 0.103
+      }
+    }
+  },
+  "selection": {
+    "development_candidate": "hgb_direct",
+    "development_absolute_errors": {
+      "mean_zero": 4434848,
+      "median_zero": 5126546,
+      "mean_observed": 4658875,
+      "median_observed": 5343299,
+      "mean_56d": 4439247,
+      "hgb_direct": 4127846,
+      "hgb_recursive": 4521218
+    },
+    "validation_baseline": "median_zero",
+    "selected": "median_zero",
+    "sep_oct_is_a_selection_gate_not_untouched_test": true
+  }
+}

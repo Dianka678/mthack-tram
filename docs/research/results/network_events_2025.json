@@ -1,0 +1,20 @@
+{
+  "scope": "Verified examples for the nine labeled routes; not a complete historical GTFS timetable",
+  "time_rule": "published_at is a calendar date; conservatively usable after end of that day",
+  "routes_in_labels": [1, 7, 11, 12, 17, 25, 26, 28, 50],
+  "routes_with_events_in_this_partial_registry": [7, 17, 50],
+  "events": [
+    {"id":"17_weekend_short_april", "routes":[17], "published_at":"2025-04-04", "valid_from":"2025-04-05", "valid_to":"2025-04-25", "when":"weekends", "effect":"shorter route Ostankino to Selskokhozyaystvennaya", "source":"https://transport.mos.ru/mostrans/all_news/123857"},
+    {"id":"17_weekend_cancel_april", "routes":[17], "published_at":"2025-04-22", "valid_from":"2025-04-26", "valid_to":"2025-04-27", "when":"weekend", "effect":"route does not operate", "source":"https://transport.mos.ru/mostrans/all_news/124110"},
+    {"id":"17_restore_may", "routes":[17], "published_at":"2025-04-30", "valid_from":"2025-05-01", "valid_to":null, "when":"weekends", "effect":"regular service restored", "source":"https://www.mosmetro.ru/news/details/6793"},
+    {"id":"7_short_july", "routes":[7], "published_at":"2025-07-02", "valid_from":"2025-07-10", "valid_to":null, "when":"all days, announced for up to 28 days; actual restoration separately published August 13", "effect":"shorter route Rokossovskogo to Sokolniki", "source":"https://transport.mos.ru/mostrans/all_news/125169"},
+    {"id":"7_50_restore_aug", "routes":[7,50], "published_at":"2025-08-13", "valid_from":"2025-08-13", "valid_to":null, "when":"all days, baseline restored", "effect":"normal service on previously closed central tracks", "source":"https://transport.mos.ru/mostrans/all_news/125800"},
+    {"id":"7_weekend_aug", "routes":[7], "published_at":"2025-08-15", "valid_from":"2025-08-16", "valid_to":null, "when":"weekends, published end not confirmed", "effect":"terminates Novoslobodskaya instead of Belorussky", "source":"https://transport.mos.ru/mostrans/all_news/125846"},
+    {"id":"50_weekend_sep", "routes":[50], "published_at":"2025-09-05", "valid_from":"2025-09-06", "valid_to":null, "when":"weekends, published end not confirmed", "effect":"announced not running, but raw validations September 13 are positive", "source":"https://mosmetro.ru/news/details/7732"},
+    {"id":"7_50_night_sep", "routes":[7,50], "published_at":"2025-09-12", "valid_from":"2025-09-12", "valid_to":null, "when":"after 23:00; repeat schedule not established", "effect":"shorter route to Kalanchyovskaya", "source":"https://transport.mos.ru/mostrans/all_news/126306"},
+    {"id":"7_weekend_sep", "routes":[7], "published_at":"2025-09-19", "valid_from":"2025-09-20", "valid_to":null, "when":"weekends, published end not confirmed", "effect":"detour via Bogorodsky to Selskokhozyaystvennaya", "source":"https://transport.mos.ru/mostrans/all_news/126405"},
+    {"id":"17_night_sep", "routes":[17], "published_at":"2025-09-15", "valid_from":"2025-09-16", "valid_to":null, "when":"after 00:20; published end not confirmed", "effect":"shorter route Medvedkovo to Selskokhozyaystvennaya", "source":"https://mosmetro.ru/news/details/7820"},
+    {"id":"7_50_night_oct", "routes":[7,50], "published_at":"2025-10-28", "valid_from":"2025-10-28", "valid_to":null, "when":"after 22:00; repeat schedule not established", "effect":"shorter route to Kalanchyovskaya", "source":"https://transport.mos.ru/mostrans/all_news/126945"},
+    {"id":"7_50_night_nov", "routes":[7,50], "published_at":"2025-11-05", "valid_from":"2025-11-05", "valid_to":null, "when":"late last trips, hours not fully established", "effect":"shorter routes during works at Komsomolskaya", "source":"https://transport.mos.ru/mostrans/all_news/127065", "excluded_from_as_of_2025_10_31":true}
+  ]
+}
