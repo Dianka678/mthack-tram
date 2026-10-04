@@ -1,0 +1,12 @@
+{
+  "title": "ВДНХ и зимние мероприятия",
+  "local_period": null,
+  "local_baseline": null,
+  "local_final": null,
+  "local_delta": null,
+  "platform_baseline": 0.88512,
+  "platform_score_user_reported": null,
+  "status": "Не принят",
+  "limitations": "Ни один из 11/17/25 не прошёл обе зимние проверки. Это узкий опыт ВДНХ; большой календарь концертов всех площадок ещё не исследован. Основной CSV сохранён на 0,88512; сценарный CSV не измерен на платформе.",
+  "notebook_sha256": "6828297d8591b284960f9f105724872d369eedfb3b9c27f98fe4b0b4ef4e0741"
+}
